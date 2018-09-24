@@ -1,0 +1,26 @@
+OwsDrv {
+  Version                 1.00
+  TargetName              "localhost"
+  MaxConsAlarms           5
+  MaxRetries              3
+  Timeout                 10
+  ItemCount               3
+  Item {
+    Name                    "TS1"
+    Path                    "/ts1/temperature12"
+    IOType                  0x0118
+    InitValue               "25"
+  }
+  Item {
+    Name                    "TS2"
+    Path                    "/ts2/temperature"
+    IOType                  0x0118
+    InitValue               "0"
+  }
+  Item {
+    Name                    "DS1"
+    Path                    "/ds1/sensed"
+    IOType                  0x0112
+    InitValue               "0"
+  }
+}

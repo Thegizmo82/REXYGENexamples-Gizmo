@@ -1,0 +1,207 @@
+Model {
+  Name                    "myproject_exec"
+  Version                 3.00
+  #RexVersion             "2.50.7 rev. 9228, Date 2018-03-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "myproject_exec"
+    Location                [38, 60, 570, 575]
+    #GUID                   f5ffee10-7913-470f-b666-c0336984f207
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [30, 88, 75, 377]
+      SourceBlock             "execlib/EXEC"
+      target                  "Generic target device"
+      tick                    "0.05"
+      ntick0                  2
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   e88142d9-7671-4c96-918e-1bb0de78c747
+    }
+    Block {
+      BlockType               Reference
+      Name                    "HMI"
+      Ports                   [0, 0, 0, 0, 0]
+      Position                [30, 403, 80, 417]
+      SourceBlock             "execlib/HMI"
+      IncludeHMI              off
+      HmiDir                  "hmi"
+      SourceDir               "hmisrc"
+      GenerateWebWatch        off
+      GenerateRexHMI          off
+      RedirectToHMI           off
+      Compression             on
+      #GUID                   a210ff84-4767-43a0-9831-c167e54ca344
+    }
+    Block {
+      BlockType               Reference
+      Name                    "INFO"
+      Ports                   [0, 0, 0, 0, 0]
+      Position                [30, 438, 75, 457]
+      SourceBlock             "execlib/INFO"
+      Title                   "OwsDrv_Aliases"
+      Author                  "Gizmo"
+      Description             "How to change One Wire Sensor/Actuator path fro"
+"m outside of OwsDrv."
+      Customer                "Rexygen Studio Example"
+      #GUID                   bc8525b3-f114-496a-8ccd-f082c565665d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "OWS"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [195, 138, 245, 152]
+      SourceBlock             "execlib/IODRV"
+      module                  "OwsDrv"
+      classname               "OwsDrv"
+      cfgname                 "RPi-W1_owscfg.rio"
+      factor                  6
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   926da0b4-684b-4d0d-a513-b0090f652f52
+    }
+    Block {
+      BlockType               Reference
+      Name                    "OwsDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [190, 103, 240, 117]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   bd6d0823-1d3d-433d-90f5-da41f75207a6
+    }
+    Block {
+      BlockType               Reference
+      Name                    "PROJECT"
+      Ports                   [0, 0, 0, 0, 0]
+      Position                [30, 473, 75, 492]
+      SourceBlock             "execlib/PROJECT"
+      CompileParams           ""
+      SourcesOnTarget         off
+      TargetURL               ""
+      #GUID                   d2ee8290-182a-4455-9c0e-fa10c55d9ab1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPI"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [115, 138, 165, 152]
+      SourceBlock             "execlib/IODRV"
+      module                  "RPiDrv"
+      classname               "RPiDrv"
+      cfgname                 ""
+      factor                  1
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   15fd3d20-1c2e-484c-8390-9993c89baa39
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPiDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [115, 103, 165, 117]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   4030d40d-bf0f-4e5c-9a58-392b09b83d39
+    }
+    Block {
+      BlockType               Reference
+      Name                    "myproject_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [110, 242, 160, 258]
+      SourceBlock             "execlib/TASK"
+      ShowName                on
+      NamePlacement           ""
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   85bc7725-5b9a-49db-bdb2-cceb7477a788
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 1
+      DstBlock                "RPiDrv"
+      DstPort                 1
+      #GUID                   7f0db5b6-f1a2-4227-9fad-c470a082960b
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 2
+      DstBlock                "RPI"
+      DstPort                 1
+      #GUID                   0768bf54-20d7-4108-915d-8ede42aba4b9
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "myproject_task"
+      DstPort                 1
+      #GUID                   dfbcd6f6-1105-4e29-92fc-632a999c3a0c
+    }
+    Line {
+      SrcBlock                "RPI"
+      SrcPort                 1
+      DstBlock                "OWS"
+      DstPort                 1
+      #GUID                   bedd7d36-97d8-4fdc-8e7a-f17f71414859
+    }
+    Line {
+      SrcBlock                "RPiDrv"
+      SrcPort                 1
+      DstBlock                "OwsDrv"
+      DstPort                 1
+      #GUID                   d704ab58-0dfb-464e-9216-abbb060621aa
+    }
+    Annotation {
+      Position                [60, 20]
+      Text                    "Plain project"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   590291c8-0e77-4cdf-a7fb-59308fed54e0
+    }
+    Annotation {
+      Position                [100, 55]
+      Text                    "See the README.md file in project \nfolder for "
+"detailed information."
+      #GUID                   eadec7a5-4d41-4d23-9935-617653a1088b
+    }
+  }
+}

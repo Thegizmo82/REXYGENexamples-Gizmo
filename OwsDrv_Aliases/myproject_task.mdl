@@ -1,0 +1,550 @@
+Model {
+  Name                    "myproject_task"
+  Version                 3.00
+  #RexVersion             "2.50.7 rev. 9228, Date 2018-03-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "myproject_task"
+    Location                [535, 27, 1494, 902]
+    #GUID                   13a2f1bf-adc5-42ba-9f2b-f576939a6341
+    Block {
+      BlockType               Reference
+      Name                    "CNB_OWSERVER"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [435, 288, 455, 302]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      #GUID                   ccf74acd-322c-4f0c-8d6a-c79364272f9f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_OWS_PATH_DS1L"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [70, 668, 90, 682]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      #GUID                   9d97887c-cb4b-4f2d-a055-4eefa80fb706
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_OWS_PATH_DS1S"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [70, 638, 90, 652]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      #GUID                   5facfb72-7fda-497e-927d-c6de6f1c202d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_OWS_PATH_TS1L"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [70, 468, 90, 482]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      #GUID                   a8d65017-9a97-4cff-b7c6-98ebe6cd111f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_OWS_PATH_TS1S"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [70, 438, 90, 452]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      #GUID                   386416c6-6c41-428b-a4d9-90f5d7a92194
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_OWS_PATH_TS2L"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [70, 568, 90, 582]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      #GUID                   58962d2d-ea43-469a-a429-7e212b134b19
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_OWS_PATH_TS2S"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [70, 538, 90, 552]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      #GUID                   8e4273c2-5931-4efe-b0e0-fbabeba179ce
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNS_OWS_PATH_DS1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [70, 608, 90, 622]
+      SourceBlock             "stringlib/CNS"
+      scv                     "/05.4AEC29CDBAAB = ds1"
+      nmax                    22
+      #GUID                   c586244d-60c1-416a-98f5-ffd96b94f4b1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNS_OWS_PATH_TS1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [70, 408, 90, 422]
+      SourceBlock             "stringlib/CNS"
+      scv                     "/28.FFD7816C1403 = ts1"
+      nmax                    22
+      #GUID                   1583e93b-426a-4c76-a6d3-f3bce70bde85
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNS_OWS_PATH_TS2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [70, 508, 90, 522]
+      SourceBlock             "stringlib/CNS"
+      scv                     "/10.67C6697351FF = ts2"
+      nmax                    22
+      #GUID                   c5d58938-8416-4299-abc3-19445a8c25ee
+    }
+    Block {
+      BlockType               Display
+      Name                    "DSP_OWSERVER_BUSY"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [645, 178, 725, 202]
+      Format                  "Best fit"
+      ShowName                on
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   450bdb50-6242-4125-b7ca-9c312ae86f37
+    }
+    Block {
+      BlockType               Display
+      Name                    "DSP_OWSERVER_DONE"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [645, 138, 725, 162]
+      Format                  "Best fit"
+      ShowName                on
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   22526cc1-2c18-456c-a396-7a57e6eeb965
+    }
+    Block {
+      BlockType               Display
+      Name                    "DSP_OWSERVER_ERR"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [645, 218, 725, 242]
+      Format                  "Best fit"
+      ShowName                on
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   63925ecf-ed85-48c5-b879-0b4381cb34c1
+    }
+    Block {
+      BlockType               Display
+      Name                    "DSP_OWSERVER_errID"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [645, 258, 725, 282]
+      Format                  "Best fit"
+      ShowName                on
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   07624f14-62b3-4bd3-9865-925ffb445cb3
+    }
+    Block {
+      BlockType               Display
+      Name                    "DSP_OWS_DS1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [270, 328, 350, 352]
+      Format                  "Best fit"
+      ShowName                on
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   0840fab8-9f45-429c-a869-21d789de4e55
+    }
+    Block {
+      BlockType               Display
+      Name                    "DSP_OWS_PATH_DS1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [275, 628, 455, 652]
+      Format                  "Best fit"
+      ShowName                on
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   762014c6-7572-4193-b9c4-d67fd66931b5
+    }
+    Block {
+      BlockType               Display
+      Name                    "DSP_OWS_PATH_TS1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [275, 428, 455, 452]
+      Format                  "Best fit"
+      ShowName                on
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   65553dbf-3cb2-49f1-a249-8fbabd9c2821
+    }
+    Block {
+      BlockType               Display
+      Name                    "DSP_OWS_PATH_TS2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [275, 528, 455, 552]
+      Format                  "Best fit"
+      ShowName                on
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   11c7437d-5fb5-43b1-9358-3da6eb9b1c22
+    }
+    Block {
+      BlockType               Display
+      Name                    "DSP_OWS_TS1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [270, 128, 350, 152]
+      Format                  "Best fit"
+      ShowName                on
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   641a78ee-de93-4369-9216-41de8b7bae9e
+    }
+    Block {
+      BlockType               Display
+      Name                    "DSP_OWS_TS2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [270, 228, 350, 252]
+      Format                  "Best fit"
+      ShowName                on
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   69a028ed-53e2-4554-8724-748d21db3fed
+    }
+    Block {
+      BlockType               Reference
+      Name                    "EPC_OWSERVER"
+      Ports                   [12, 15, 0, 0, 0]
+      Position                [525, 133, 595, 317]
+      SourceBlock             "speclib/EPC"
+      cmd                     "sudo service owserver restart"
+      ifns                    ""
+      ofns                    ""
+      sl                      0
+      ifm                     1
+      format                  "1: Space-delimited values"
+      nmax                    2
+      #GUID                   d526bb39-20ba-43f3-a0fd-0b71f86740db
+    }
+    Block {
+      BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [25, 233, 145, 247]
+      ShowName                off
+      GotoTag                 "OWS__TS2"
+      BackgroundColor         "yellow"
+      #GUID                   62fbfd38-5613-4fb0-af7b-1444e07ff9f1
+    }
+    Block {
+      BlockType               From
+      Name                    "From2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [25, 133, 145, 147]
+      ShowName                off
+      GotoTag                 "OWS__TS1"
+      BackgroundColor         "yellow"
+      #GUID                   598e7398-b480-4885-85dc-236172e0070d
+    }
+    Block {
+      BlockType               From
+      Name                    "From3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [25, 333, 145, 347]
+      ShowName                off
+      GotoTag                 "OWS__DS1"
+      BackgroundColor         "yellow"
+      #GUID                   c2d82c94-1f00-4a4a-890f-2572c8b3e7bc
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MP_OWSERVER"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [435, 258, 450, 272]
+      SourceBlock             "genlib/MP"
+      BSTATE                  off
+      pwidth                  2
+      RPTF                    off
+      #GUID                   5905ca7b-51d3-462d-9e97-d5cfd2296052
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOV_OWSERVER"
+      Ports                   [9, 1, 0, 0, 0]
+      Position                [440, 97, 485, 193]
+      SourceBlock             "matrixlib/RTOV"
+      nmax                    8
+      offset                  0
+      n                       8
+      etype                   "8: Double"
+      #GUID                   f04a6e33-5bf7-434e-abc7-222865221806
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SILOS_OWS_PATH_TS1"
+      Ports                   [4, 3, 0, 0, 0]
+      Position                [170, 432, 230, 478]
+      SourceBlock             "paramlib/SILOS"
+      fname                   "/owfs/ow-ts1"
+      CSF                     off
+      CLF                     off
+      LLO                     off
+      nmax                    0
+      #GUID                   78c8df8f-0534-489b-a244-2e6cb825c5e1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SILOS_OWS_PATH_TS2"
+      Ports                   [4, 3, 0, 0, 0]
+      Position                [170, 532, 230, 578]
+      SourceBlock             "paramlib/SILOS"
+      fname                   "/owfs/ow-ts2"
+      CSF                     off
+      CLF                     off
+      LLO                     off
+      nmax                    0
+      #GUID                   7732d97d-0b22-446c-8946-c3ab4a979411
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SILOS_OWS_PATH_dS1"
+      Ports                   [4, 3, 0, 0, 0]
+      Position                [170, 632, 230, 678]
+      SourceBlock             "paramlib/SILOS"
+      fname                   "/owfs/ow-ds1"
+      CSF                     off
+      CLF                     off
+      LLO                     off
+      nmax                    0
+      #GUID                   dccbd9c9-d69d-4907-8a02-3aee18baa6e2
+    }
+    Line {
+      SrcBlock                "CNB_OWSERVER"
+      SrcPort                 1
+      Points                  [45, 0]
+      #GUID                   e90b2f0f-6dc1-4ca6-8c4b-411c2371d023
+      Branch {
+        DstBlock                "EPC_OWSERVER"
+        DstPort                 11
+        #GUID                   a3cc8d4d-f252-48b8-84c0-5a0feb43c2f1
+      }
+      Branch {
+        Points                  [0, 15]
+        DstBlock                "EPC_OWSERVER"
+        DstPort                 12
+        #GUID                   11a09ae6-174e-4cad-8445-d9e8cd0c971d
+      }
+    }
+    Line {
+      SrcBlock                "CNB_OWS_PATH_DS1L"
+      SrcPort                 1
+      Points                  [60, 0]
+      DstBlock                "SILOS_OWS_PATH_dS1"
+      DstPort                 3
+      #GUID                   a4030356-dbfa-4630-95be-9ff8e2e73505
+    }
+    Line {
+      SrcBlock                "CNB_OWS_PATH_DS1S"
+      SrcPort                 1
+      Points                  [60, 0]
+      DstBlock                "SILOS_OWS_PATH_dS1"
+      DstPort                 2
+      #GUID                   aa437fa4-8468-43fc-96e1-e4d64734f2d4
+    }
+    Line {
+      SrcBlock                "CNB_OWS_PATH_TS1L"
+      SrcPort                 1
+      Points                  [60, 0]
+      DstBlock                "SILOS_OWS_PATH_TS1"
+      DstPort                 3
+      #GUID                   e219131e-6bff-4066-9c81-928d0813a38b
+    }
+    Line {
+      SrcBlock                "CNB_OWS_PATH_TS1S"
+      SrcPort                 1
+      Points                  [60, 0]
+      DstBlock                "SILOS_OWS_PATH_TS1"
+      DstPort                 2
+      #GUID                   7138917d-cce5-4f19-8537-025a28449112
+    }
+    Line {
+      SrcBlock                "CNB_OWS_PATH_TS2L"
+      SrcPort                 1
+      Points                  [60, 0]
+      DstBlock                "SILOS_OWS_PATH_TS2"
+      DstPort                 3
+      #GUID                   9ca779c2-1b63-4813-95dd-522043d38cfc
+    }
+    Line {
+      SrcBlock                "CNB_OWS_PATH_TS2S"
+      SrcPort                 1
+      Points                  [60, 0]
+      DstBlock                "SILOS_OWS_PATH_TS2"
+      DstPort                 2
+      #GUID                   837b3b06-fb5f-446d-adb0-ab9983d25a08
+    }
+    Line {
+      SrcBlock                "CNS_OWS_PATH_DS1"
+      SrcPort                 1
+      Points                  [60, 0]
+      DstBlock                "SILOS_OWS_PATH_dS1"
+      DstPort                 1
+      #GUID                   bd12b530-2bae-465e-8828-8d1a039c3753
+    }
+    Line {
+      SrcBlock                "CNS_OWS_PATH_TS1"
+      SrcPort                 1
+      Points                  [60, 0]
+      DstBlock                "SILOS_OWS_PATH_TS1"
+      DstPort                 1
+      #GUID                   faee86b7-f310-4178-b482-94972de3f534
+    }
+    Line {
+      SrcBlock                "CNS_OWS_PATH_TS2"
+      SrcPort                 1
+      Points                  [60, 0]
+      DstBlock                "SILOS_OWS_PATH_TS2"
+      DstPort                 1
+      #GUID                   c93865ad-0a07-44a0-bf88-dbaec9028a0b
+    }
+    Line {
+      SrcBlock                "EPC_OWSERVER"
+      SrcPort                 9
+      Points                  [5, 0; 0, -85]
+      DstBlock                "DSP_OWSERVER_DONE"
+      DstPort                 1
+      #GUID                   19c04da3-55f6-4b70-8281-90c791cca2bd
+    }
+    Line {
+      SrcBlock                "EPC_OWSERVER"
+      SrcPort                 10
+      Points                  [10, 0; 0, -55]
+      DstBlock                "DSP_OWSERVER_BUSY"
+      DstPort                 1
+      #GUID                   7917e7a3-a1dc-4add-aad8-896e0a0aa3ed
+    }
+    Line {
+      SrcBlock                "EPC_OWSERVER"
+      SrcPort                 11
+      Points                  [15, 0; 0, -25]
+      DstBlock                "DSP_OWSERVER_ERR"
+      DstPort                 1
+      #GUID                   3d5a016a-759f-43dd-8c7e-23d321a129e4
+    }
+    Line {
+      SrcBlock                "EPC_OWSERVER"
+      SrcPort                 12
+      Points                  [5, 0; 0, 5]
+      DstBlock                "DSP_OWSERVER_errID"
+      DstPort                 1
+      #GUID                   3feb1412-1893-464a-8e61-9aa9990069fb
+    }
+    Line {
+      SrcBlock                "From1"
+      SrcPort                 1
+      DstBlock                "DSP_OWS_TS2"
+      DstPort                 1
+      #GUID                   b79a0554-1d66-448e-89fe-3fb2140cfaa0
+    }
+    Line {
+      SrcBlock                "From2"
+      SrcPort                 1
+      DstBlock                "DSP_OWS_TS1"
+      DstPort                 1
+      #GUID                   1a3c59a4-33cc-4fb8-8f56-1ad43183a396
+    }
+    Line {
+      SrcBlock                "From3"
+      SrcPort                 1
+      DstBlock                "DSP_OWS_DS1"
+      DstPort                 1
+      #GUID                   7e706b9c-6a06-429d-a172-b2b278b85e9a
+    }
+    Line {
+      SrcBlock                "MP_OWSERVER"
+      SrcPort                 1
+      DstBlock                "EPC_OWSERVER"
+      DstPort                 9
+      #GUID                   34fb7eca-6d61-41b8-b693-a27da8ee7d81
+    }
+    Line {
+      SrcBlock                "RTOV_OWSERVER"
+      SrcPort                 1
+      DstBlock                "EPC_OWSERVER"
+      DstPort                 1
+      #GUID                   d40cf790-265e-4644-88a0-f2a6a274fb97
+    }
+    Line {
+      SrcBlock                "SILOS_OWS_PATH_TS1"
+      SrcPort                 1
+      DstBlock                "DSP_OWS_PATH_TS1"
+      DstPort                 1
+      #GUID                   e98abf9e-3a45-4471-af51-2aef6136f738
+    }
+    Line {
+      SrcBlock                "SILOS_OWS_PATH_TS2"
+      SrcPort                 1
+      DstBlock                "DSP_OWS_PATH_TS2"
+      DstPort                 1
+      #GUID                   c03e2ded-f32d-4c4f-836b-0f0303bbdd6b
+    }
+    Line {
+      SrcBlock                "SILOS_OWS_PATH_dS1"
+      SrcPort                 1
+      DstBlock                "DSP_OWS_PATH_DS1"
+      DstPort                 1
+      #GUID                   cb588965-c57a-4bae-9cf3-eac53b6a2e0e
+    }
+    Annotation {
+      Position                [170, 45]
+      Text                    "See the README.md file in project folder for de"
+"tailed information."
+      #GUID                   693ee5bc-de59-4cfd-8764-c2fdb5b9c02f
+    }
+    Annotation {
+      Position                [170, 20]
+      Text                    "OwsDrv external configuration example"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   e3601f30-0093-42de-8c87-47483416558a
+    }
+  }
+}
