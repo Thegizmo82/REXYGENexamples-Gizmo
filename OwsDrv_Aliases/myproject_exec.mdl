@@ -34,7 +34,7 @@ Model {
   }
   System {
     Name                    "myproject_exec"
-    Location                [38, 60, 570, 575]
+    Location                [22, 59, 554, 574]
     #GUID                   f5ffee10-7913-470f-b666-c0336984f207
     Block {
       BlockType               Reference
@@ -60,12 +60,12 @@ Model {
       Ports                   [0, 0, 0, 0, 0]
       Position                [30, 403, 80, 417]
       SourceBlock             "execlib/HMI"
-      IncludeHMI              off
+      IncludeHMI              on
       HmiDir                  "hmi"
       SourceDir               "hmisrc"
-      GenerateWebWatch        off
-      GenerateRexHMI          off
-      RedirectToHMI           off
+      GenerateWebWatch        on
+      GenerateRexHMI          on
+      RedirectToHMI           on
       Compression             on
       #GUID                   a210ff84-4767-43a0-9831-c167e54ca344
     }

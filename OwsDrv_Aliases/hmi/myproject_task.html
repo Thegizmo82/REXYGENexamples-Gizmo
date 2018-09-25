@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<!-- REX HMI Template version=2.50.7-9228 -->
+
+<html class="mdc-typography">
+
+<head>
+    <meta charset="utf-8" />
+
+    <!-- Allow fullscreen on mobile platforms -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Chrome -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- iOS -->
+
+
+    <link rel="icon shortcut" sizes="any" href="images/favicon.ico">
+
+
+    <title>
+        myproject_task
+    </title>
+
+    <!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui/jquery-ui-1.12.1-custom.min.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui/jquery-ui-timepicker-addon.min.css">
+		<link rel="stylesheet" type="text/css" href="css/mdc/rex-material-components-web.css">
+		<link rel="stylesheet" type="text/css" href="css/rex-hmi.min.css">
+
+
+    <!-- JS -->
+		<script type="text/javascript" src="js/rexhmi-vendor.min.js?version=2.50.7-9228"></script>
+		<script type="text/javascript" src="js/rexhmi.min.js?version=2.50.7-9228"></script>
+
+
+    <script type="text/javascript">
+        // Uncomment the following function if necessary
+        // The following function is called before the REX HMI is automatically connected to the
+        // given target URL
+        /* REX.HMI.init = function() {
+
+                // Set REX Target URL (use only if the target is NOT running on the same machine)
+                // REX.HMI.setTargetUrl('ws://127.0.0.1:8008/rex');
+
+                // Set refresh rate (Default: 100 ms)
+                // REX.HMI.setRefreshRate(100);
+
+                // Change title of the page
+                // REX.HMI.setTitle('TITLE');
+
+            }; */
+    </script>
+
+</head>
+
+<body>
+    <header id="header">        
+        <a id="logo" href="/"></a>
+        <div id="header-title" class="header-title-with-info-and-hearth-beat">
+            myproject_task
+        </div>
+        <time id="heart-beat-clock" class="current-time" style="display:none">XX:XX:XX</time>
+        <div id="heart-beat"></div>
+        <div id="info-btn" class="">
+            <div id="log-error-counter" class="">0</div>
+        </div>
+    </header>
+    <div id="main-block">
+        <aside id="info" class="">
+            <div id="controls">
+                <table class="table-list">
+                    <tr>
+                        <td>User</td>
+                        <td class='info-whoami'>
+                            <span class="whoami">XXXXX</span>&nbsp;
+                            <form id="info-logout" action="/logout" method="POST">
+                                (<button type="submit">logout</button>)
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Version</td>
+                        <td class="info-version">X.X.X-XXXX</td>
+                    </tr>
+                    <tr>
+                        <td>Target time</td>
+                        <td class="current-time">XX:XX:XX</td>
+                    </tr>
+                    <tr>
+                        <td>Refresh rate</td>
+                        <td>
+                            <div class="mdc-text-field mdc-text-field--fullwidth" data-mdc-auto-init="MDCTextField">
+                                <input type="text" id="target-refresh-rate" class="mdc-text-field__input">
+                                <div class="mdc-text-field__bottom-line"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>URL</td>
+                        <td>
+                            <div class="mdc-text-field mdc-text-field--fullwidth" data-mdc-auto-init="MDCTextField">
+                                <input type="text" id="target-url" class="mdc-text-field__input">
+                                <div class="mdc-text-field__bottom-line"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="log">
+                <table></table>
+            </div>
+        </aside>        
+        <main id="content" class="">
+            <!-- BEGIN OF CUSTOM CONTENT -->
+<div id="rex-dialog-container" oncontextmenu="return false;">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' style='width:745px;height:702px' id='myproject_task'>
+<g transform='translate(435 288)' id='myproject_task.CNB_OWSERVER' class='rex-block' rex-block-type='CNB' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,14 L20,14 L20,0 zM0,0 L0,14 L20,14 L20,0 L0,0  z' stroke='rgb(0,0,0)' fill='rgb(255,255,255)' /><text x='7' y='10' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>Y</tspan></text>
+<text x='-33' y='25' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>CNB_OWSERVER</tspan></text>
+<line x1='25' y1='7' x2='20' y2='7' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(70 668)' id='myproject_task.CNB_OWS_PATH_DS1L' class='rex-block' rex-block-type='CNB' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,14 L20,14 L20,0 zM0,0 L0,14 L20,14 L20,0 L0,0  z' stroke='rgb(0,0,0)' fill='rgb(255,255,255)' /><text x='7' y='10' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>Y</tspan></text>
+<text x='-47' y='25' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>CNB_OWS_PATH_DS1L</tspan></text>
+<line x1='25' y1='7' x2='20' y2='7' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(70 638)' id='myproject_task.CNB_OWS_PATH_DS1S' class='rex-block' rex-block-type='CNB' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,14 L20,14 L20,0 zM0,0 L0,14 L20,14 L20,0 L0,0  z' stroke='rgb(0,0,0)' fill='rgb(255,255,255)' /><text x='7' y='10' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>Y</tspan></text>
+<text x='-48' y='25' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>CNB_OWS_PATH_DS1S</tspan></text>
+<line x1='25' y1='7' x2='20' y2='7' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(70 468)' id='myproject_task.CNB_OWS_PATH_TS1L' class='rex-block' rex-block-type='CNB' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,14 L20,14 L20,0 zM0,0 L0,14 L20,14 L20,0 L0,0  z' stroke='rgb(0,0,0)' fill='rgb(255,255,255)' /><text x='7' y='10' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>Y</tspan></text>
+<text x='-47' y='25' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>CNB_OWS_PATH_TS1L</tspan></text>
+<line x1='25' y1='7' x2='20' y2='7' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(70 438)' id='myproject_task.CNB_OWS_PATH_TS1S' class='rex-block' rex-block-type='CNB' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,14 L20,14 L20,0 zM0,0 L0,14 L20,14 L20,0 L0,0  z' stroke='rgb(0,0,0)' fill='rgb(255,255,255)' /><text x='7' y='10' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>Y</tspan></text>
+<text x='-48' y='25' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>CNB_OWS_PATH_TS1S</tspan></text>
+<line x1='25' y1='7' x2='20' y2='7' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(70 568)' id='myproject_task.CNB_OWS_PATH_TS2L' class='rex-block' rex-block-type='CNB' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,14 L20,14 L20,0 zM0,0 L0,14 L20,14 L20,0 L0,0  z' stroke='rgb(0,0,0)' fill='rgb(255,255,255)' /><text x='7' y='10' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>Y</tspan></text>
+<text x='-47' y='25' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>CNB_OWS_PATH_TS2L</tspan></text>
+<line x1='25' y1='7' x2='20' y2='7' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(70 538)' id='myproject_task.CNB_OWS_PATH_TS2S' class='rex-block' rex-block-type='CNB' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,14 L20,14 L20,0 zM0,0 L0,14 L20,14 L20,0 L0,0  z' stroke='rgb(0,0,0)' fill='rgb(255,255,255)' /><text x='7' y='10' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>Y</tspan></text>
+<text x='-48' y='25' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>CNB_OWS_PATH_TS2S</tspan></text>
+<line x1='25' y1='7' x2='20' y2='7' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(70 608)' id='myproject_task.CNS_OWS_PATH_DS1' class='rex-block' rex-block-type='CNS' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,14 L20,14 L20,0 zM0,0 L0,14 L20,14 L20,0 L0,0  z' stroke='rgb(0,0,0)' fill='rgb(255,255,255)' /><text x='3' y='10' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>scv</tspan></text>
+<text x='-44' y='25' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>CNS_OWS_PATH_DS1</tspan></text>
+<line x1='25' y1='7' x2='20' y2='7' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(70 408)' id='myproject_task.CNS_OWS_PATH_TS1' class='rex-block' rex-block-type='CNS' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,14 L20,14 L20,0 zM0,0 L0,14 L20,14 L20,0 L0,0  z' stroke='rgb(0,0,0)' fill='rgb(255,255,255)' /><text x='3' y='10' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>scv</tspan></text>
+<text x='-44' y='25' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>CNS_OWS_PATH_TS1</tspan></text>
+<line x1='25' y1='7' x2='20' y2='7' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(70 508)' id='myproject_task.CNS_OWS_PATH_TS2' class='rex-block' rex-block-type='CNS' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,14 L20,14 L20,0 zM0,0 L0,14 L20,14 L20,0 L0,0  z' stroke='rgb(0,0,0)' fill='rgb(255,255,255)' /><text x='3' y='10' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>scv</tspan></text>
+<text x='-44' y='25' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>CNS_OWS_PATH_TS2</tspan></text>
+<line x1='25' y1='7' x2='20' y2='7' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(645 178)' id='myproject_task.DSP_OWSERVER_BUSY' class='rex-block' rex-block-type='Display' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,24 L80,24 L80,0 zM0,0 L0,24 L80,24 L80,0 L0,0  z' stroke='rgb(0,0,0)' fill='rgb(255,255,255)' /><text x='17' y='15' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>DispValue</tspan></text>
+<text x='-20' y='35' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>DSP_OWSERVER_BUSY</tspan></text>
+<path d='M-10,8 L-1,12 L-10,16z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='12' x2='0' y2='12' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(645 138)' id='myproject_task.DSP_OWSERVER_DONE' class='rex-block' rex-block-type='Display' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,24 L80,24 L80,0 zM0,0 L0,24 L80,24 L80,0 L0,0  z' stroke='rgb(0,0,0)' fill='rgb(255,255,255)' /><text x='17' y='15' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>DispValue</tspan></text>
+<text x='-20' y='35' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>DSP_OWSERVER_DONE</tspan></text>
+<path d='M-10,8 L-1,12 L-10,16z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='12' x2='0' y2='12' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(645 218)' id='myproject_task.DSP_OWSERVER_ERR' class='rex-block' rex-block-type='Display' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,24 L80,24 L80,0 zM0,0 L0,24 L80,24 L80,0 L0,0  z' stroke='rgb(0,0,0)' fill='rgb(255,255,255)' /><text x='17' y='15' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>DispValue</tspan></text>
+<text x='-16' y='35' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>DSP_OWSERVER_ERR</tspan></text>
+<path d='M-10,8 L-1,12 L-10,16z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='12' x2='0' y2='12' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(645 258)' id='myproject_task.DSP_OWSERVER_errID' class='rex-block' rex-block-type='Display' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,24 L80,24 L80,0 zM0,0 L0,24 L80,24 L80,0 L0,0  z' stroke='rgb(0,0,0)' fill='rgb(255,255,255)' /><text x='17' y='15' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>DispValue</tspan></text>
+<text x='-17' y='35' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>DSP_OWSERVER_errID</tspan></text>
+<path d='M-10,8 L-1,12 L-10,16z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='12' x2='0' y2='12' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(270 328)' id='myproject_task.DSP_OWS_DS1' class='rex-block' rex-block-type='Display' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,24 L80,24 L80,0 zM0,0 L0,24 L80,24 L80,0 L0,0  z' stroke='rgb(0,0,0)' fill='rgb(255,255,255)' /><text x='17' y='15' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>DispValue</tspan></text>
+<text x='1' y='35' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>DSP_OWS_DS1</tspan></text>
+<path d='M-10,8 L-1,12 L-10,16z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='12' x2='0' y2='12' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(275 628)' id='myproject_task.DSP_OWS_PATH_DS1' class='rex-block' rex-block-type='Display' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,24 L180,24 L180,0 zM0,0 L0,24 L180,24 L180,0 L0,0  z' stroke='rgb(0,0,0)' fill='rgb(255,255,255)' /><text x='67' y='15' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>DispValue</tspan></text>
+<text x='35' y='35' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>DSP_OWS_PATH_DS1</tspan></text>
+<path d='M-10,8 L-1,12 L-10,16z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='12' x2='0' y2='12' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(275 428)' id='myproject_task.DSP_OWS_PATH_TS1' class='rex-block' rex-block-type='Display' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,24 L180,24 L180,0 zM0,0 L0,24 L180,24 L180,0 L0,0  z' stroke='rgb(0,0,0)' fill='rgb(255,255,255)' /><text x='67' y='15' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>DispValue</tspan></text>
+<text x='35' y='35' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>DSP_OWS_PATH_TS1</tspan></text>
+<path d='M-10,8 L-1,12 L-10,16z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='12' x2='0' y2='12' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(275 528)' id='myproject_task.DSP_OWS_PATH_TS2' class='rex-block' rex-block-type='Display' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,24 L180,24 L180,0 zM0,0 L0,24 L180,24 L180,0 L0,0  z' stroke='rgb(0,0,0)' fill='rgb(255,255,255)' /><text x='67' y='15' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>DispValue</tspan></text>
+<text x='35' y='35' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>DSP_OWS_PATH_TS2</tspan></text>
+<path d='M-10,8 L-1,12 L-10,16z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='12' x2='0' y2='12' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(270 128)' id='myproject_task.DSP_OWS_TS1' class='rex-block' rex-block-type='Display' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,24 L80,24 L80,0 zM0,0 L0,24 L80,24 L80,0 L0,0  z' stroke='rgb(0,0,0)' fill='rgb(255,255,255)' /><text x='17' y='15' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>DispValue</tspan></text>
+<text x='1' y='35' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>DSP_OWS_TS1</tspan></text>
+<path d='M-10,8 L-1,12 L-10,16z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='12' x2='0' y2='12' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(270 228)' id='myproject_task.DSP_OWS_TS2' class='rex-block' rex-block-type='Display' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,24 L80,24 L80,0 zM0,0 L0,24 L80,24 L80,0 L0,0  z' stroke='rgb(0,0,0)' fill='rgb(255,255,255)' /><text x='17' y='15' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>DispValue</tspan></text>
+<text x='1' y='35' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>DSP_OWS_TS2</tspan></text>
+<path d='M-10,8 L-1,12 L-10,16z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='12' x2='0' y2='12' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(525 133)' id='myproject_task.EPC_OWSERVER' class='rex-block' rex-block-type='EPC' rex-orientation='0'>
+<rect width='70' height='184' fill='rgb(255,255,255)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'></rect>
+<text x='-8' y='195' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>EPC_OWSERVER</tspan></text>
+<text class='rex-block-in' x='2' y='15' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>uVec1</tspan></text>
+<path d='M-10,8 L-1,12 L-10,16z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='12' x2='0' y2='12' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-in' x='2' y='30' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>uVec2</tspan></text>
+<polyline points='-4,24 -1,27 -4,30' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-in' x='2' y='45' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>uVec3</tspan></text>
+<polyline points='-4,39 -1,42 -4,45' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-in' x='2' y='60' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>uVec4</tspan></text>
+<polyline points='-4,54 -1,57 -4,60' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-in' x='2' y='75' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>uVec5</tspan></text>
+<polyline points='-4,69 -1,72 -4,75' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-in' x='2' y='90' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>uVec6</tspan></text>
+<polyline points='-4,84 -1,87 -4,90' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-in' x='2' y='105' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>uVec7</tspan></text>
+<polyline points='-4,99 -1,102 -4,105' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-in' x='2' y='120' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>uVec8</tspan></text>
+<polyline points='-4,114 -1,117 -4,120' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-in' x='2' y='135' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>EXEC</tspan></text>
+<path d='M-10,128 L-1,132 L-10,136z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='132' x2='0' y2='132' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-in' x='2' y='150' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>RESET</tspan></text>
+<polyline points='-4,144 -1,147 -4,150' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-in' x='2' y='165' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>DSI</tspan></text>
+<path d='M-10,158 L-1,162 L-10,166z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='162' x2='0' y2='162' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-in' x='2' y='180' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>DSO</tspan></text>
+<path d='M-10,173 L-1,177 L-10,181z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='177' x2='0' y2='177' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-out' x='67' y='25' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>yVec1</tspan></text>
+<polyline points='70,19 74,22 70,25' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-out' x='67' y='35' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>yVec2</tspan></text>
+<polyline points='70,29 74,32 70,35' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-out' x='67' y='45' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>yVec3</tspan></text>
+<polyline points='70,39 74,42 70,45' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-out' x='67' y='55' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>yVec4</tspan></text>
+<polyline points='70,49 74,52 70,55' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-out' x='67' y='65' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>yVec5</tspan></text>
+<polyline points='70,59 74,62 70,65' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-out' x='67' y='75' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>yVec6</tspan></text>
+<polyline points='70,69 74,72 70,75' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-out' x='67' y='85' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>yVec7</tspan></text>
+<polyline points='70,79 74,82 70,85' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-out' x='67' y='95' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>yVec8</tspan></text>
+<polyline points='70,89 74,92 70,95' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-out' x='67' y='105' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>DONE</tspan></text>
+<line x1='75' y1='102' x2='70' y2='102' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-out' x='67' y='115' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>BUSY</tspan></text>
+<line x1='75' y1='112' x2='70' y2='112' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-out' x='67' y='125' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>ERR</tspan></text>
+<line x1='75' y1='122' x2='70' y2='122' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-out' x='67' y='135' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>errID</tspan></text>
+<line x1='75' y1='132' x2='70' y2='132' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-out' x='67' y='145' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>res</tspan></text>
+<polyline points='70,139 74,142 70,145' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-out' x='67' y='155' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>icnt</tspan></text>
+<polyline points='70,149 74,152 70,155' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-out' x='67' y='165' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>ocnt</tspan></text>
+<polyline points='70,159 74,162 70,165' fill='none' stroke='rgb(0,0,0)'/>
+</g>
+<g transform='translate(25 233)' id='myproject_task.From1' class='rex-block' rex-block-type='From' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,14 L90,14 L120,7 L90,0 zM60,7  z' stroke='rgb(0,0,0)' fill='rgb(232,209,82)' /><text x='32' y='10' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>OWS__TS2</tspan></text>
+<line x1='125' y1='7' x2='120' y2='7' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(25 133)' id='myproject_task.From2' class='rex-block' rex-block-type='From' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,14 L90,14 L120,7 L90,0 zM60,7  z' stroke='rgb(0,0,0)' fill='rgb(232,209,82)' /><text x='32' y='10' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>OWS__TS1</tspan></text>
+<line x1='125' y1='7' x2='120' y2='7' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(25 333)' id='myproject_task.From3' class='rex-block' rex-block-type='From' rex-orientation='0'>
+<path d='M0,0 L0,0 L0,14 L90,14 L120,7 L90,0 zM60,7  z' stroke='rgb(0,0,0)' fill='rgb(232,209,82)' /><text x='32' y='10' font-family='Helvetica' font-size='10' fill='rgb(0,0,0)' text-anchor='start'><tspan>OWS__DS1</tspan></text>
+<line x1='125' y1='7' x2='120' y2='7' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(435 258)' id='myproject_task.MP_OWSERVER' class='rex-block' rex-block-type='MP' rex-orientation='0'>
+<rect width='15' height='14' fill='rgb(255,255,255)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'></rect>
+<text x='-33' y='25' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>MP_OWSERVER</tspan></text>
+<text class='rex-block-out' x='12' y='10' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>Y</tspan></text>
+<line x1='20' y1='7' x2='15' y2='7' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(440 97)' id='myproject_task.RTOV_OWSERVER' class='rex-block' rex-block-type='RTOV' rex-orientation='0'>
+<rect width='45' height='96' fill='rgb(255,255,255)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'></rect>
+<text x='-24' y='107' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>RTOV_OWSERVER</tspan></text>
+<text class='rex-block-in' x='2' y='11' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>uVec</tspan></text>
+<polyline points='-4,5 -1,8 -4,11' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-in' x='2' y='21' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>u1</tspan></text>
+<polyline points='-4,15 -1,18 -4,21' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-in' x='2' y='31' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>u2</tspan></text>
+<polyline points='-4,25 -1,28 -4,31' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-in' x='2' y='41' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>u3</tspan></text>
+<polyline points='-4,35 -1,38 -4,41' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-in' x='2' y='51' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>u4</tspan></text>
+<polyline points='-4,45 -1,48 -4,51' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-in' x='2' y='61' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>u5</tspan></text>
+<polyline points='-4,55 -1,58 -4,61' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-in' x='2' y='71' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>u6</tspan></text>
+<polyline points='-4,65 -1,68 -4,71' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-in' x='2' y='81' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>u7</tspan></text>
+<polyline points='-4,75 -1,78 -4,81' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-in' x='2' y='91' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>u8</tspan></text>
+<polyline points='-4,85 -1,88 -4,91' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-out' x='42' y='51' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>yVec</tspan></text>
+<line x1='50' y1='48' x2='45' y2='48' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(170 432)' id='myproject_task.SILOS_OWS_PATH_TS1' class='rex-block' rex-block-type='SILOS' rex-orientation='0'>
+<rect width='60' height='46' fill='rgb(255,255,255)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'></rect>
+<text x='-29' y='57' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>SILOS_OWS_PATH_TS1</tspan></text>
+<text class='rex-block-in' x='2' y='11' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>su</tspan></text>
+<path d='M-10,4 L-1,8 L-10,12z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='8' x2='0' y2='8' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-in' x='2' y='21' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>SAVE</tspan></text>
+<path d='M-10,14 L-1,18 L-10,22z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='18' x2='0' y2='18' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-in' x='2' y='31' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>LOAD</tspan></text>
+<path d='M-10,24 L-1,28 L-10,32z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='28' x2='0' y2='28' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-in' x='2' y='41' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>APPEND</tspan></text>
+<polyline points='-4,35 -1,38 -4,41' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-out' x='57' y='11' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>sy</tspan></text>
+<line x1='65' y1='8' x2='60' y2='8' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-out' x='57' y='26' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>E</tspan></text>
+<polyline points='60,20 64,23 60,26' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-out' x='57' y='41' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>iE</tspan></text>
+<polyline points='60,35 64,38 60,41' fill='none' stroke='rgb(0,0,0)'/>
+</g>
+<g transform='translate(170 532)' id='myproject_task.SILOS_OWS_PATH_TS2' class='rex-block' rex-block-type='SILOS' rex-orientation='0'>
+<rect width='60' height='46' fill='rgb(255,255,255)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'></rect>
+<text x='-29' y='57' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>SILOS_OWS_PATH_TS2</tspan></text>
+<text class='rex-block-in' x='2' y='11' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>su</tspan></text>
+<path d='M-10,4 L-1,8 L-10,12z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='8' x2='0' y2='8' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-in' x='2' y='21' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>SAVE</tspan></text>
+<path d='M-10,14 L-1,18 L-10,22z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='18' x2='0' y2='18' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-in' x='2' y='31' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>LOAD</tspan></text>
+<path d='M-10,24 L-1,28 L-10,32z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='28' x2='0' y2='28' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-in' x='2' y='41' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>APPEND</tspan></text>
+<polyline points='-4,35 -1,38 -4,41' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-out' x='57' y='11' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>sy</tspan></text>
+<line x1='65' y1='8' x2='60' y2='8' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-out' x='57' y='26' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>E</tspan></text>
+<polyline points='60,20 64,23 60,26' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-out' x='57' y='41' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>iE</tspan></text>
+<polyline points='60,35 64,38 60,41' fill='none' stroke='rgb(0,0,0)'/>
+</g>
+<g transform='translate(170 632)' id='myproject_task.SILOS_OWS_PATH_dS1' class='rex-block' rex-block-type='SILOS' rex-orientation='0'>
+<rect width='60' height='46' fill='rgb(255,255,255)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'></rect>
+<text x='-29' y='57' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>SILOS_OWS_PATH_dS1</tspan></text>
+<text class='rex-block-in' x='2' y='11' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>su</tspan></text>
+<path d='M-10,4 L-1,8 L-10,12z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='8' x2='0' y2='8' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-in' x='2' y='21' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>SAVE</tspan></text>
+<path d='M-10,14 L-1,18 L-10,22z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='18' x2='0' y2='18' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-in' x='2' y='31' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>LOAD</tspan></text>
+<path d='M-10,24 L-1,28 L-10,32z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='28' x2='0' y2='28' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-in' x='2' y='41' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>APPEND</tspan></text>
+<polyline points='-4,35 -1,38 -4,41' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-out' x='57' y='11' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>sy</tspan></text>
+<line x1='65' y1='8' x2='60' y2='8' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-out' x='57' y='26' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>E</tspan></text>
+<polyline points='60,20 64,23 60,26' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-out' x='57' y='41' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>iE</tspan></text>
+<polyline points='60,35 64,38 60,41' fill='none' stroke='rgb(0,0,0)'/>
+</g>
+<g class='rex-annotation'>
+<rect x='11' y='39' width='318' height='13' fill='rgb(255,255,255)' stroke='none' shape-rendering='crispEdges'></rect>
+<text x='13' y='39' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'>
+<tspan x='13' y='50'>See the README.md file in project folder for detailed information.</tspan>
+</text>
+</g>
+<g class='rex-annotation'>
+<rect x='18' y='11' width='304' height='19' fill='rgb(255,255,255)' stroke='none' shape-rendering='crispEdges'></rect>
+<text x='20' y='11' font-family='Helvetica' font-size='16' font-weight='700' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'>
+<tspan x='20' y='28'>OwsDrv external configuration example</tspan>
+</text>
+</g>
+<g class='rex-line'>
+<path d='M460,295 L505,295' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<rect x='504' y='294' width='2' height='2' stroke='rgb(0,0,0)' class='rex-line' shape-rendering='crispEdges'></rect>
+<path d='M505,295 L510,295' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M505,295 L505,310 L510,310' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M95,675 L155,675 L155,660' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M95,645 L155,645 L155,650' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M95,475 L155,475 L155,460' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M95,445 L155,445 L155,450' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M95,575 L155,575 L155,560' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M95,545 L155,545 L155,550' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M95,615 L155,615 L155,640' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M95,415 L155,415 L155,440' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M95,515 L155,515 L155,540' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M600,235 L605,235 L605,150 L630,150' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M600,245 L610,245 L610,190 L630,190' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M600,255 L615,255 L615,230 L630,230' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M600,265 L605,265 L605,270 L630,270' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M150,240 L255,240' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M150,140 L255,140' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M150,340 L255,340' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M455,265 L510,265' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M490,145 L510,145' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M235,440 L260,440' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M235,540 L260,540' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M235,640 L260,640' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+</g>
+</svg>
+</div>

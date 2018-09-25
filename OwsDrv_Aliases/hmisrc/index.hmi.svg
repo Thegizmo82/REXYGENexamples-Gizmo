@@ -1,0 +1,2492 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:rexsvg="http://www.rexcontrols.com/rexsvg"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1246"
+   height="800"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (b81de4013d, 2018-02-13, custom)"
+   sodipodi:docname="index.hmi.svg">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="221.04172"
+     inkscape:cy="352.50719"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:21.33333397px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="84.859627"
+       y="75.598961"
+       id="text4337"><tspan
+         sodipodi:role="line"
+         id="tspan4335"
+         x="84.859627"
+         y="75.598961">Temperature Sensor 1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:21.33333397px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="493.57812"
+       y="75.619789"
+       id="text4337-9"><tspan
+         sodipodi:role="line"
+         id="tspan4335-7"
+         x="493.57812"
+         y="75.619789">Temperature Sensor 2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:21.33333397px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="890.89581"
+       y="75.75"
+       id="text4337-1"><tspan
+         sodipodi:role="line"
+         id="tspan4335-9"
+         x="890.89581"
+         y="75.75">Digital Input Sensor 1</tspan></text>
+    <g
+       transform="matrix(0.52698381,0,0,1,180.53349,106.13672)"
+       id="DisplayString"
+       rexsvg:version="11"
+       rexsvg:filename="DisplayString.svg"
+       rexsvg:module="DisplayString">
+      <title
+         id="ds-title">DisplayString</title>
+      <desc
+         id="ds-desc">{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:&quot;&quot;,
+&quot;hide_by&quot;:&quot;&quot;,
+&quot;value&quot;:&quot;TS1&quot;
+},
+&quot;metaData&quot;:{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is disabled and data are no longer updated.&quot;,
+&quot;optional&quot;:true
+},
+&quot;hide_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
+&quot;optional&quot;:true
+},
+&quot;value&quot;:{
+&quot;desc&quot;:&quot;Datapoint from which the value is read.&quot;,
+&quot;order&quot;:&quot;01&quot;
+}
+},
+&quot;desc&quot;:&quot;The Display string component reads the value from the target and display it as a text. It can simply display the read value &lt;code&gt;format&lt;/code&gt;: &lt;code&gt;text&lt;/code&gt; or lookup the value in the table &lt;code&gt;alt&lt;/code&gt; (alternative lookup table) of descriptions. &lt;br /&gt;&lt;i&gt;Note:If the value contains newline sign the text is wrapped.&lt;/i&gt;&quot;,
+&quot;format&quot;:{
+&quot;desc&quot;:&quot;&lt;code&gt;text&lt;/code&gt; - show the read value as is.&lt;br /&gt;&lt;code&gt;alt&lt;/code&gt; - Lookup the description for the read value in the &lt;code&gt;values&lt;/code&gt; list. If not found display the value as is.&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;text&quot;,
+&quot;alt&quot;
+]
+},
+&quot;showValue&quot;:{
+&quot;desc&quot;:&quot;If True prepend the value in front of the description separated by colon.&lt;br /&gt; Example: &lt;code&gt;0: Status OK&lt;/code&gt;&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;tabDimensions&quot;:{
+&quot;tab_minsize&quot;:0,
+&quot;windowHeight&quot;:272,
+&quot;windowWidth&quot;:278
+},
+&quot;updateType&quot;:&quot;Partial&quot;,
+&quot;values&quot;:{
+&quot;columns&quot;:{
+&quot;desc&quot;:{
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;string&quot;
+},
+&quot;value&quot;:{
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;string&quot;
+}
+},
+&quot;desc&quot;:&quot;List of value:desc pairs where the description is looked up when the value is read.&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;table&quot;
+}
+},
+&quot;options&quot;:{
+&quot;format&quot;:&quot;text&quot;,
+&quot;showValue&quot;:&quot;False&quot;,
+&quot;values&quot;:[]
+}
+}</desc>
+      <text
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+         id="text3689"
+         x="-25.914042"
+         y="19.401041"
+         rexsvg:tag="display">XXX DISPLAY STRING XXX</text>
+    </g>
+    <g
+       transform="matrix(0.5132732,0,0,1,589.34172,106.13672)"
+       id="DisplayString-3"
+       rexsvg:version="11"
+       rexsvg:filename="DisplayString.svg"
+       rexsvg:module="DisplayString">
+      <title
+         id="ds-title-5">DisplayString</title>
+      <desc
+         id="ds-desc-2">{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:&quot;&quot;,
+&quot;hide_by&quot;:&quot;&quot;,
+&quot;value&quot;:&quot;TS2&quot;
+},
+&quot;metaData&quot;:{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is disabled and data are no longer updated.&quot;,
+&quot;optional&quot;:true
+},
+&quot;hide_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
+&quot;optional&quot;:true
+},
+&quot;value&quot;:{
+&quot;desc&quot;:&quot;Datapoint from which the value is read.&quot;,
+&quot;order&quot;:&quot;01&quot;
+}
+},
+&quot;desc&quot;:&quot;The Display string component reads the value from the target and display it as a text. It can simply display the read value &lt;code&gt;format&lt;/code&gt;: &lt;code&gt;text&lt;/code&gt; or lookup the value in the table &lt;code&gt;alt&lt;/code&gt; (alternative lookup table) of descriptions. &lt;br /&gt;&lt;i&gt;Note:If the value contains newline sign the text is wrapped.&lt;/i&gt;&quot;,
+&quot;format&quot;:{
+&quot;desc&quot;:&quot;&lt;code&gt;text&lt;/code&gt; - show the read value as is.&lt;br /&gt;&lt;code&gt;alt&lt;/code&gt; - Lookup the description for the read value in the &lt;code&gt;values&lt;/code&gt; list. If not found display the value as is.&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;text&quot;,
+&quot;alt&quot;
+]
+},
+&quot;showValue&quot;:{
+&quot;desc&quot;:&quot;If True prepend the value in front of the description separated by colon.&lt;br /&gt; Example: &lt;code&gt;0: Status OK&lt;/code&gt;&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;updateType&quot;:&quot;Partial&quot;,
+&quot;values&quot;:{
+&quot;columns&quot;:{
+&quot;desc&quot;:{
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;string&quot;
+},
+&quot;value&quot;:{
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;string&quot;
+}
+},
+&quot;desc&quot;:&quot;List of value:desc pairs where the description is looked up when the value is read.&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;table&quot;
+}
+},
+&quot;options&quot;:{
+&quot;format&quot;:&quot;text&quot;,
+&quot;showValue&quot;:&quot;False&quot;,
+&quot;values&quot;:[]
+}
+}</desc>
+      <text
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+         id="text3689-0"
+         x="-25.914042"
+         y="19.401041"
+         rexsvg:tag="display">XXX DISPLAY STRING XXX</text>
+    </g>
+    <g
+       rexsvg:module="DisplayString"
+       rexsvg:filename="DisplayString.svg"
+       rexsvg:version="11"
+       id="DisplayString-8"
+       transform="matrix(0.55440503,0,0,1,961.40064,106.13672)">
+      <title
+         id="ds-title-7">DisplayString</title>
+      <desc
+         id="ds-desc-0">{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:&quot;&quot;,
+&quot;hide_by&quot;:&quot;&quot;,
+&quot;value&quot;:&quot;TS3&quot;
+},
+&quot;metaData&quot;:{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is disabled and data are no longer updated.&quot;,
+&quot;optional&quot;:true
+},
+&quot;hide_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
+&quot;optional&quot;:true
+},
+&quot;value&quot;:{
+&quot;desc&quot;:&quot;Datapoint from which the value is read.&quot;,
+&quot;order&quot;:&quot;01&quot;
+}
+},
+&quot;desc&quot;:&quot;The Display string component reads the value from the target and display it as a text. It can simply display the read value &lt;code&gt;format&lt;/code&gt;: &lt;code&gt;text&lt;/code&gt; or lookup the value in the table &lt;code&gt;alt&lt;/code&gt; (alternative lookup table) of descriptions. &lt;br /&gt;&lt;i&gt;Note:If the value contains newline sign the text is wrapped.&lt;/i&gt;&quot;,
+&quot;format&quot;:{
+&quot;desc&quot;:&quot;&lt;code&gt;text&lt;/code&gt; - show the read value as is.&lt;br /&gt;&lt;code&gt;alt&lt;/code&gt; - Lookup the description for the read value in the &lt;code&gt;values&lt;/code&gt; list. If not found display the value as is.&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;text&quot;,
+&quot;alt&quot;
+]
+},
+&quot;showValue&quot;:{
+&quot;desc&quot;:&quot;If True prepend the value in front of the description separated by colon.&lt;br /&gt; Example: &lt;code&gt;0: Status OK&lt;/code&gt;&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;updateType&quot;:&quot;Partial&quot;,
+&quot;values&quot;:{
+&quot;columns&quot;:{
+&quot;desc&quot;:{
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;string&quot;
+},
+&quot;value&quot;:{
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;string&quot;
+}
+},
+&quot;desc&quot;:&quot;List of value:desc pairs where the description is looked up when the value is read.&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;table&quot;
+}
+},
+&quot;options&quot;:{
+&quot;format&quot;:&quot;text&quot;,
+&quot;showValue&quot;:&quot;False&quot;,
+&quot;values&quot;:[]
+}
+}</desc>
+      <text
+         rexsvg:tag="display"
+         y="19.401041"
+         x="-25.914042"
+         id="text3689-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">XXX DISPLAY STRING XXX</text>
+    </g>
+    <g
+       id="Input"
+       rexsvg:module="Input"
+       rexsvg:filename="Input.svg"
+       rexsvg:version="13"
+       transform="matrix(2.8726754,0,0,1.291685,60.370868,407.62473)">
+      <title
+         id="title2990">TS1 Sensor Path</title>
+      <desc
+         id="desc3795">{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:&quot;&quot;,
+&quot;hide_by&quot;:&quot;&quot;,
+&quot;refresh_from&quot;:&quot;&quot;,
+&quot;value&quot;:&quot;INPUT_TS1&quot;
+},
+&quot;metaData&quot;:{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is disabled and data are no longer updated.&quot;,
+&quot;optional&quot;:true
+},
+&quot;hide_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
+&quot;optional&quot;:true
+},
+&quot;refresh_from&quot;:{
+&quot;desc&quot;:&quot;Optional datapoint where the value is updated.&quot;,
+&quot;optional&quot;:true,
+&quot;order&quot;:&quot;02&quot;,
+&quot;prev&quot;:[
+&quot;value_R&quot;
+]
+},
+&quot;value&quot;:{
+&quot;desc&quot;:&quot;Datapoint where the value is written.&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;prev&quot;:[
+&quot;value_W&quot;
+],
+&quot;write&quot;:true
+}
+},
+&quot;css&quot;:{
+&quot;desc&quot;:&quot;Custom CSS style for the HTML input object. For example \\{'background-color':'#00ffff'\\}&quot;,
+&quot;order&quot;:&quot;11&quot;,
+&quot;type&quot;:&quot;object&quot;
+},
+&quot;decimals&quot;:{
+&quot;desc&quot;:&quot;Round the value to defined number of decimals. Applicable for &lt;code&gt;number&lt;/code&gt; format only.&quot;,
+&quot;max&quot;:&quot;6&quot;,
+&quot;min&quot;:&quot;0&quot;,
+&quot;order&quot;:&quot;06&quot;,
+&quot;type&quot;:&quot;int&quot;
+},
+&quot;desc&quot;:&quot;Input component allow to write numbers, texts, dates or times to the target. If the &lt;code&gt;number&lt;/code&gt; format is selected the value can be converted using &lt;code&gt;scale&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; adn rounded to number of &lt;code&gt;decimals&lt;/code&gt;. The Input allows to limit user input to the range defined by &lt;code&gt;min&lt;/code&gt; and &lt;code&gt;max&lt;/code&gt; parameters. There is &lt;code&gt;virtualKeyboard&lt;/code&gt; available for kiosk mode devices. The &lt;code&gt;date&lt;/code&gt;, &lt;code&gt;time&lt;/code&gt; and &lt;code&gt;datetime&lt;/code&gt; format has a special widget to enter the dates. The value from this format is converted to the number of milliseconds from REX epoch.&lt;br /&gt;&lt;i&gt;Note:The value is written to the &lt;code&gt;value&lt;/code&gt; datapoint, if necessary it can be refresh from different location defined in the  &lt;code&gt;refresh_from&lt;/code&gt; datapoint. It can be used if the value is limited by saturation. &lt;/i&gt;&quot;,
+&quot;fontScale&quot;:{
+&quot;desc&quot;:&quot;The Input is using HTML input component which is not binded with SVG. Use this parameter to scale font.&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;format&quot;:{
+&quot;desc&quot;:&quot;&lt;code&gt;number&lt;/code&gt; - If selected the value is converted to the number either integer or float. Also the parameters &lt;code&gt;scale&lt;/code&gt;,&lt;code&gt;offset&lt;/code&gt; and &lt;code&gt;decimals&lt;/code&gt; are applied during conversion.&lt;br /&gt;&lt;code&gt;time&lt;/code&gt; and &lt;code&gt;datetime&lt;/code&gt; - The input will convert time or datetime to the number of milliseconds from REX Epoch.&lt;br /&gt;&lt;code&gt;text&lt;/code&gt; - Simple enter the value in the format as is. Suitable for short strings.&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;number&quot;,
+&quot;text&quot;,
+&quot;date&quot;,
+&quot;time&quot;,
+&quot;datetime&quot;
+]
+},
+&quot;max&quot;:{
+&quot;desc&quot;:&quot;The maximum value user can enter. Applicable for &lt;code&gt;number&lt;/code&gt; format only.&quot;,
+&quot;order&quot;:&quot;08&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;min&quot;:{
+&quot;desc&quot;:&quot;The minimum value user can enter. Applicable for &lt;code&gt;number&lt;/code&gt; format only.&quot;,
+&quot;order&quot;:&quot;07&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;offset&quot;:{
+&quot;desc&quot;:&quot;Add some offset to the value. Applicable for &lt;code&gt;number&lt;/code&gt; format only.&quot;,
+&quot;order&quot;:&quot;05&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;scale&quot;:{
+&quot;desc&quot;:&quot;Scale the value. Applicable for &lt;code&gt;number&lt;/code&gt; format only.&quot;,
+&quot;order&quot;:&quot;04&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;setOnBlur&quot;:{
+&quot;desc&quot;:&quot;If True the data input value is set on blur event (Press ESC to cancel write).&quot;,
+&quot;order&quot;:&quot;09&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;textAlign&quot;:{
+&quot;desc&quot;:&quot;The Input is using HTML input component which is not binded with SVG. Use this parameter to scale font.&quot;,
+&quot;order&quot;:&quot;03&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;left&quot;,
+&quot;center&quot;,
+&quot;right&quot;
+]
+},
+&quot;virtualKeyboard&quot;:{
+&quot;desc&quot;:&quot;If True the virtual keyboard is show for data input.&quot;,
+&quot;order&quot;:&quot;10&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;writePerm&quot;:{
+&quot;columns&quot;:{
+&quot;login&quot;:{
+&quot;type&quot;:&quot;str&quot;
+}
+},
+&quot;desc&quot;:&quot;List of logins who are allowed to write to the data point. If not in list the Input will be disabled.&quot;,
+&quot;order&quot;:&quot;12&quot;,
+&quot;type&quot;:&quot;table&quot;
+}
+},
+&quot;options&quot;:{
+&quot;css&quot;:{},
+&quot;decimals&quot;:0,
+&quot;fontScale&quot;:1,
+&quot;format&quot;:&quot;text&quot;,
+&quot;max&quot;:&quot;&quot;,
+&quot;min&quot;:&quot;&quot;,
+&quot;offset&quot;:0,
+&quot;scale&quot;:1,
+&quot;setOnBlur&quot;:&quot;False&quot;,
+&quot;textAlign&quot;:&quot;left&quot;,
+&quot;virtualKeyboard&quot;:&quot;False&quot;,
+&quot;writePerm&quot;:[]
+}
+}</desc>
+      <rect
+         y="0"
+         x="0"
+         height="30"
+         width="100"
+         id="rect3010"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.85783237;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="Text-1"
+         y="17.929766"
+         x="49.687382"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#0000ff;fill-opacity:1;stroke:none"
+         xml:space="preserve"
+         inkscape:label="#text3012"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.3317461px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;fill:#0000ff;fill-opacity:1"
+           y="17.929766"
+           x="49.687382"
+           id="tspan3014"
+           sodipodi:role="line">Input</tspan></text>
+    </g>
+    <g
+       id="Input-9"
+       rexsvg:module="Input"
+       rexsvg:filename="Input.svg"
+       rexsvg:version="13"
+       transform="matrix(2.8727089,0,0,1.2910178,475.51764,407.63474)">
+      <title
+         id="title2990-2">TS2 Sensor Path</title>
+      <desc
+         id="desc3795-5">{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:&quot;&quot;,
+&quot;hide_by&quot;:&quot;&quot;,
+&quot;refresh_from&quot;:&quot;&quot;,
+&quot;value&quot;:&quot;INPUT_TS2&quot;
+},
+&quot;metaData&quot;:{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is disabled and data are no longer updated.&quot;,
+&quot;optional&quot;:true
+},
+&quot;hide_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
+&quot;optional&quot;:true
+},
+&quot;refresh_from&quot;:{
+&quot;desc&quot;:&quot;Optional datapoint where the value is updated.&quot;,
+&quot;optional&quot;:true,
+&quot;order&quot;:&quot;02&quot;,
+&quot;prev&quot;:[
+&quot;value_R&quot;
+]
+},
+&quot;value&quot;:{
+&quot;desc&quot;:&quot;Datapoint where the value is written.&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;prev&quot;:[
+&quot;value_W&quot;
+],
+&quot;write&quot;:true
+}
+},
+&quot;css&quot;:{
+&quot;desc&quot;:&quot;Custom CSS style for the HTML input object. For example \\{'background-color':'#00ffff'\\}&quot;,
+&quot;order&quot;:&quot;11&quot;,
+&quot;type&quot;:&quot;object&quot;
+},
+&quot;decimals&quot;:{
+&quot;desc&quot;:&quot;Round the value to defined number of decimals. Applicable for &lt;code&gt;number&lt;/code&gt; format only.&quot;,
+&quot;max&quot;:&quot;6&quot;,
+&quot;min&quot;:&quot;0&quot;,
+&quot;order&quot;:&quot;06&quot;,
+&quot;type&quot;:&quot;int&quot;
+},
+&quot;desc&quot;:&quot;Input component allow to write numbers, texts, dates or times to the target. If the &lt;code&gt;number&lt;/code&gt; format is selected the value can be converted using &lt;code&gt;scale&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; adn rounded to number of &lt;code&gt;decimals&lt;/code&gt;. The Input allows to limit user input to the range defined by &lt;code&gt;min&lt;/code&gt; and &lt;code&gt;max&lt;/code&gt; parameters. There is &lt;code&gt;virtualKeyboard&lt;/code&gt; available for kiosk mode devices. The &lt;code&gt;date&lt;/code&gt;, &lt;code&gt;time&lt;/code&gt; and &lt;code&gt;datetime&lt;/code&gt; format has a special widget to enter the dates. The value from this format is converted to the number of milliseconds from REX epoch.&lt;br /&gt;&lt;i&gt;Note:The value is written to the &lt;code&gt;value&lt;/code&gt; datapoint, if necessary it can be refresh from different location defined in the  &lt;code&gt;refresh_from&lt;/code&gt; datapoint. It can be used if the value is limited by saturation. &lt;/i&gt;&quot;,
+&quot;fontScale&quot;:{
+&quot;desc&quot;:&quot;The Input is using HTML input component which is not binded with SVG. Use this parameter to scale font.&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;format&quot;:{
+&quot;desc&quot;:&quot;&lt;code&gt;number&lt;/code&gt; - If selected the value is converted to the number either integer or float. Also the parameters &lt;code&gt;scale&lt;/code&gt;,&lt;code&gt;offset&lt;/code&gt; and &lt;code&gt;decimals&lt;/code&gt; are applied during conversion.&lt;br /&gt;&lt;code&gt;time&lt;/code&gt; and &lt;code&gt;datetime&lt;/code&gt; - The input will convert time or datetime to the number of milliseconds from REX Epoch.&lt;br /&gt;&lt;code&gt;text&lt;/code&gt; - Simple enter the value in the format as is. Suitable for short strings.&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;number&quot;,
+&quot;text&quot;,
+&quot;date&quot;,
+&quot;time&quot;,
+&quot;datetime&quot;
+]
+},
+&quot;max&quot;:{
+&quot;desc&quot;:&quot;The maximum value user can enter. Applicable for &lt;code&gt;number&lt;/code&gt; format only.&quot;,
+&quot;order&quot;:&quot;08&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;min&quot;:{
+&quot;desc&quot;:&quot;The minimum value user can enter. Applicable for &lt;code&gt;number&lt;/code&gt; format only.&quot;,
+&quot;order&quot;:&quot;07&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;offset&quot;:{
+&quot;desc&quot;:&quot;Add some offset to the value. Applicable for &lt;code&gt;number&lt;/code&gt; format only.&quot;,
+&quot;order&quot;:&quot;05&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;scale&quot;:{
+&quot;desc&quot;:&quot;Scale the value. Applicable for &lt;code&gt;number&lt;/code&gt; format only.&quot;,
+&quot;order&quot;:&quot;04&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;setOnBlur&quot;:{
+&quot;desc&quot;:&quot;If True the data input value is set on blur event (Press ESC to cancel write).&quot;,
+&quot;order&quot;:&quot;09&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;textAlign&quot;:{
+&quot;desc&quot;:&quot;The Input is using HTML input component which is not binded with SVG. Use this parameter to scale font.&quot;,
+&quot;order&quot;:&quot;03&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;left&quot;,
+&quot;center&quot;,
+&quot;right&quot;
+]
+},
+&quot;virtualKeyboard&quot;:{
+&quot;desc&quot;:&quot;If True the virtual keyboard is show for data input.&quot;,
+&quot;order&quot;:&quot;10&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;writePerm&quot;:{
+&quot;columns&quot;:{
+&quot;login&quot;:{
+&quot;type&quot;:&quot;str&quot;
+}
+},
+&quot;desc&quot;:&quot;List of logins who are allowed to write to the data point. If not in list the Input will be disabled.&quot;,
+&quot;order&quot;:&quot;12&quot;,
+&quot;type&quot;:&quot;table&quot;
+}
+},
+&quot;options&quot;:{
+&quot;css&quot;:{},
+&quot;decimals&quot;:0,
+&quot;fontScale&quot;:1,
+&quot;format&quot;:&quot;text&quot;,
+&quot;max&quot;:&quot;&quot;,
+&quot;min&quot;:&quot;&quot;,
+&quot;offset&quot;:0,
+&quot;scale&quot;:1,
+&quot;setOnBlur&quot;:&quot;False&quot;,
+&quot;textAlign&quot;:&quot;left&quot;,
+&quot;virtualKeyboard&quot;:&quot;False&quot;,
+&quot;writePerm&quot;:[]
+}
+}</desc>
+      <rect
+         y="0"
+         x="0"
+         height="30"
+         width="100"
+         id="rect3010-7"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.85783237;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="Text-1-2"
+         y="17.929766"
+         x="49.687382"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#0000ff;fill-opacity:1;stroke:none"
+         xml:space="preserve"
+         inkscape:label="#text3012"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.3317461px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;fill:#0000ff;fill-opacity:1"
+           y="17.929766"
+           x="49.687382"
+           id="tspan3014-3"
+           sodipodi:role="line">Input</tspan></text>
+    </g>
+    <g
+       id="Input-9-9"
+       rexsvg:module="Input"
+       rexsvg:filename="Input.svg"
+       rexsvg:version="13"
+       transform="matrix(2.8328593,0,0,1.2920629,866.52289,407.61906)">
+      <title
+         id="title2990-2-9">DS1 Sensor Path</title>
+      <desc
+         id="desc3795-5-1">{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:&quot;&quot;,
+&quot;hide_by&quot;:&quot;&quot;,
+&quot;refresh_from&quot;:&quot;&quot;,
+&quot;value&quot;:&quot;INPUT_DS1&quot;
+},
+&quot;metaData&quot;:{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is disabled and data are no longer updated.&quot;,
+&quot;optional&quot;:true
+},
+&quot;hide_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
+&quot;optional&quot;:true
+},
+&quot;refresh_from&quot;:{
+&quot;desc&quot;:&quot;Optional datapoint where the value is updated.&quot;,
+&quot;optional&quot;:true,
+&quot;order&quot;:&quot;02&quot;,
+&quot;prev&quot;:[
+&quot;value_R&quot;
+]
+},
+&quot;value&quot;:{
+&quot;desc&quot;:&quot;Datapoint where the value is written.&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;prev&quot;:[
+&quot;value_W&quot;
+],
+&quot;write&quot;:true
+}
+},
+&quot;css&quot;:{
+&quot;desc&quot;:&quot;Custom CSS style for the HTML input object. For example \\{'background-color':'#00ffff'\\}&quot;,
+&quot;order&quot;:&quot;11&quot;,
+&quot;type&quot;:&quot;object&quot;
+},
+&quot;decimals&quot;:{
+&quot;desc&quot;:&quot;Round the value to defined number of decimals. Applicable for &lt;code&gt;number&lt;/code&gt; format only.&quot;,
+&quot;max&quot;:&quot;6&quot;,
+&quot;min&quot;:&quot;0&quot;,
+&quot;order&quot;:&quot;06&quot;,
+&quot;type&quot;:&quot;int&quot;
+},
+&quot;desc&quot;:&quot;Input component allow to write numbers, texts, dates or times to the target. If the &lt;code&gt;number&lt;/code&gt; format is selected the value can be converted using &lt;code&gt;scale&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; adn rounded to number of &lt;code&gt;decimals&lt;/code&gt;. The Input allows to limit user input to the range defined by &lt;code&gt;min&lt;/code&gt; and &lt;code&gt;max&lt;/code&gt; parameters. There is &lt;code&gt;virtualKeyboard&lt;/code&gt; available for kiosk mode devices. The &lt;code&gt;date&lt;/code&gt;, &lt;code&gt;time&lt;/code&gt; and &lt;code&gt;datetime&lt;/code&gt; format has a special widget to enter the dates. The value from this format is converted to the number of milliseconds from REX epoch.&lt;br /&gt;&lt;i&gt;Note:The value is written to the &lt;code&gt;value&lt;/code&gt; datapoint, if necessary it can be refresh from different location defined in the  &lt;code&gt;refresh_from&lt;/code&gt; datapoint. It can be used if the value is limited by saturation. &lt;/i&gt;&quot;,
+&quot;fontScale&quot;:{
+&quot;desc&quot;:&quot;The Input is using HTML input component which is not binded with SVG. Use this parameter to scale font.&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;format&quot;:{
+&quot;desc&quot;:&quot;&lt;code&gt;number&lt;/code&gt; - If selected the value is converted to the number either integer or float. Also the parameters &lt;code&gt;scale&lt;/code&gt;,&lt;code&gt;offset&lt;/code&gt; and &lt;code&gt;decimals&lt;/code&gt; are applied during conversion.&lt;br /&gt;&lt;code&gt;time&lt;/code&gt; and &lt;code&gt;datetime&lt;/code&gt; - The input will convert time or datetime to the number of milliseconds from REX Epoch.&lt;br /&gt;&lt;code&gt;text&lt;/code&gt; - Simple enter the value in the format as is. Suitable for short strings.&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;number&quot;,
+&quot;text&quot;,
+&quot;date&quot;,
+&quot;time&quot;,
+&quot;datetime&quot;
+]
+},
+&quot;max&quot;:{
+&quot;desc&quot;:&quot;The maximum value user can enter. Applicable for &lt;code&gt;number&lt;/code&gt; format only.&quot;,
+&quot;order&quot;:&quot;08&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;min&quot;:{
+&quot;desc&quot;:&quot;The minimum value user can enter. Applicable for &lt;code&gt;number&lt;/code&gt; format only.&quot;,
+&quot;order&quot;:&quot;07&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;offset&quot;:{
+&quot;desc&quot;:&quot;Add some offset to the value. Applicable for &lt;code&gt;number&lt;/code&gt; format only.&quot;,
+&quot;order&quot;:&quot;05&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;scale&quot;:{
+&quot;desc&quot;:&quot;Scale the value. Applicable for &lt;code&gt;number&lt;/code&gt; format only.&quot;,
+&quot;order&quot;:&quot;04&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;setOnBlur&quot;:{
+&quot;desc&quot;:&quot;If True the data input value is set on blur event (Press ESC to cancel write).&quot;,
+&quot;order&quot;:&quot;09&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;tabDimensions&quot;:{
+&quot;tab_minsize&quot;:0,
+&quot;windowHeight&quot;:272,
+&quot;windowWidth&quot;:278
+},
+&quot;textAlign&quot;:{
+&quot;desc&quot;:&quot;The Input is using HTML input component which is not binded with SVG. Use this parameter to scale font.&quot;,
+&quot;order&quot;:&quot;03&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;left&quot;,
+&quot;center&quot;,
+&quot;right&quot;
+]
+},
+&quot;virtualKeyboard&quot;:{
+&quot;desc&quot;:&quot;If True the virtual keyboard is show for data input.&quot;,
+&quot;order&quot;:&quot;10&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;writePerm&quot;:{
+&quot;columns&quot;:{
+&quot;login&quot;:{
+&quot;type&quot;:&quot;str&quot;
+}
+},
+&quot;desc&quot;:&quot;List of logins who are allowed to write to the data point. If not in list the Input will be disabled.&quot;,
+&quot;order&quot;:&quot;12&quot;,
+&quot;type&quot;:&quot;table&quot;
+}
+},
+&quot;options&quot;:{
+&quot;css&quot;:{},
+&quot;decimals&quot;:0,
+&quot;fontScale&quot;:1,
+&quot;format&quot;:&quot;text&quot;,
+&quot;max&quot;:&quot;&quot;,
+&quot;min&quot;:&quot;&quot;,
+&quot;offset&quot;:0,
+&quot;scale&quot;:1,
+&quot;setOnBlur&quot;:&quot;False&quot;,
+&quot;textAlign&quot;:&quot;left&quot;,
+&quot;virtualKeyboard&quot;:&quot;False&quot;,
+&quot;writePerm&quot;:[]
+}
+}</desc>
+      <rect
+         y="0"
+         x="0"
+         height="30"
+         width="100"
+         id="rect3010-7-5"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.85783237;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="Text-1-2-4"
+         y="17.929766"
+         x="49.687382"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#0000ff;fill-opacity:1;stroke:none"
+         xml:space="preserve"
+         inkscape:label="#text3012"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.3317461px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;fill:#0000ff;fill-opacity:1"
+           y="17.929766"
+           x="49.687382"
+           id="tspan3014-3-9"
+           sodipodi:role="line">Input</tspan></text>
+    </g>
+    <g
+       transform="translate(82.711184,331.13672)"
+       id="DisplayString-0"
+       rexsvg:version="11"
+       rexsvg:filename="DisplayString.svg"
+       rexsvg:module="DisplayString">
+      <title
+         id="ds-title-8">OWS Path TS1</title>
+      <desc
+         id="ds-desc-04">{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:&quot;&quot;,
+&quot;hide_by&quot;:&quot;&quot;,
+&quot;value&quot;:&quot;INPUT_TS1SY&quot;
+},
+&quot;metaData&quot;:{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is disabled and data are no longer updated.&quot;,
+&quot;optional&quot;:true
+},
+&quot;hide_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
+&quot;optional&quot;:true
+},
+&quot;value&quot;:{
+&quot;desc&quot;:&quot;Datapoint from which the value is read.&quot;,
+&quot;order&quot;:&quot;01&quot;
+}
+},
+&quot;desc&quot;:&quot;The Display string component reads the value from the target and display it as a text. It can simply display the read value &lt;code&gt;format&lt;/code&gt;: &lt;code&gt;text&lt;/code&gt; or lookup the value in the table &lt;code&gt;alt&lt;/code&gt; (alternative lookup table) of descriptions. &lt;br /&gt;&lt;i&gt;Note:If the value contains newline sign the text is wrapped.&lt;/i&gt;&quot;,
+&quot;format&quot;:{
+&quot;desc&quot;:&quot;&lt;code&gt;text&lt;/code&gt; - show the read value as is.&lt;br /&gt;&lt;code&gt;alt&lt;/code&gt; - Lookup the description for the read value in the &lt;code&gt;values&lt;/code&gt; list. If not found display the value as is.&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;text&quot;,
+&quot;alt&quot;
+]
+},
+&quot;showValue&quot;:{
+&quot;desc&quot;:&quot;If True prepend the value in front of the description separated by colon.&lt;br /&gt; Example: &lt;code&gt;0: Status OK&lt;/code&gt;&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;tabDimensions&quot;:{
+&quot;tab_minsize&quot;:0,
+&quot;windowHeight&quot;:272,
+&quot;windowWidth&quot;:278
+},
+&quot;updateType&quot;:&quot;Partial&quot;,
+&quot;values&quot;:{
+&quot;columns&quot;:{
+&quot;desc&quot;:{
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;string&quot;
+},
+&quot;value&quot;:{
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;string&quot;
+}
+},
+&quot;desc&quot;:&quot;List of value:desc pairs where the description is looked up when the value is read.&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;table&quot;
+}
+},
+&quot;options&quot;:{
+&quot;format&quot;:&quot;text&quot;,
+&quot;showValue&quot;:&quot;False&quot;,
+&quot;values&quot;:[]
+}
+}</desc>
+      <text
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+         id="text3689-3"
+         x="-25.914042"
+         y="19.401041"
+         rexsvg:tag="display">XXX DISPLAY STRING XXX</text>
+    </g>
+    <g
+       transform="translate(491.87239,331.13672)"
+       id="DisplayString-0-2"
+       rexsvg:version="11"
+       rexsvg:filename="DisplayString.svg"
+       rexsvg:module="DisplayString">
+      <title
+         id="ds-title-8-9">OWS Path TS2</title>
+      <desc
+         id="ds-desc-04-1">{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:&quot;&quot;,
+&quot;hide_by&quot;:&quot;&quot;,
+&quot;value&quot;:&quot;INPUT_TS2SY&quot;
+},
+&quot;metaData&quot;:{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is disabled and data are no longer updated.&quot;,
+&quot;optional&quot;:true
+},
+&quot;hide_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
+&quot;optional&quot;:true
+},
+&quot;value&quot;:{
+&quot;desc&quot;:&quot;Datapoint from which the value is read.&quot;,
+&quot;order&quot;:&quot;01&quot;
+}
+},
+&quot;desc&quot;:&quot;The Display string component reads the value from the target and display it as a text. It can simply display the read value &lt;code&gt;format&lt;/code&gt;: &lt;code&gt;text&lt;/code&gt; or lookup the value in the table &lt;code&gt;alt&lt;/code&gt; (alternative lookup table) of descriptions. &lt;br /&gt;&lt;i&gt;Note:If the value contains newline sign the text is wrapped.&lt;/i&gt;&quot;,
+&quot;format&quot;:{
+&quot;desc&quot;:&quot;&lt;code&gt;text&lt;/code&gt; - show the read value as is.&lt;br /&gt;&lt;code&gt;alt&lt;/code&gt; - Lookup the description for the read value in the &lt;code&gt;values&lt;/code&gt; list. If not found display the value as is.&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;text&quot;,
+&quot;alt&quot;
+]
+},
+&quot;showValue&quot;:{
+&quot;desc&quot;:&quot;If True prepend the value in front of the description separated by colon.&lt;br /&gt; Example: &lt;code&gt;0: Status OK&lt;/code&gt;&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;tabDimensions&quot;:{
+&quot;tab_minsize&quot;:0,
+&quot;windowHeight&quot;:272,
+&quot;windowWidth&quot;:278
+},
+&quot;updateType&quot;:&quot;Partial&quot;,
+&quot;values&quot;:{
+&quot;columns&quot;:{
+&quot;desc&quot;:{
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;string&quot;
+},
+&quot;value&quot;:{
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;string&quot;
+}
+},
+&quot;desc&quot;:&quot;List of value:desc pairs where the description is looked up when the value is read.&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;table&quot;
+}
+},
+&quot;options&quot;:{
+&quot;format&quot;:&quot;text&quot;,
+&quot;showValue&quot;:&quot;False&quot;,
+&quot;values&quot;:[]
+}
+}</desc>
+      <text
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+         id="text3689-3-3"
+         x="-25.914042"
+         y="19.401041"
+         rexsvg:tag="display">XXX DISPLAY STRING XXX</text>
+    </g>
+    <g
+       rexsvg:module="DisplayString"
+       rexsvg:filename="DisplayString.svg"
+       rexsvg:version="11"
+       id="DisplayString-0-7"
+       transform="translate(888.87239,331.13672)">
+      <title
+         id="ds-title-8-3">OWS Path DS1</title>
+      <desc
+         id="ds-desc-04-4">{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:&quot;&quot;,
+&quot;hide_by&quot;:&quot;&quot;,
+&quot;value&quot;:&quot;INPUT_DS1SY&quot;
+},
+&quot;metaData&quot;:{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is disabled and data are no longer updated.&quot;,
+&quot;optional&quot;:true
+},
+&quot;hide_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
+&quot;optional&quot;:true
+},
+&quot;value&quot;:{
+&quot;desc&quot;:&quot;Datapoint from which the value is read.&quot;,
+&quot;order&quot;:&quot;01&quot;
+}
+},
+&quot;desc&quot;:&quot;The Display string component reads the value from the target and display it as a text. It can simply display the read value &lt;code&gt;format&lt;/code&gt;: &lt;code&gt;text&lt;/code&gt; or lookup the value in the table &lt;code&gt;alt&lt;/code&gt; (alternative lookup table) of descriptions. &lt;br /&gt;&lt;i&gt;Note:If the value contains newline sign the text is wrapped.&lt;/i&gt;&quot;,
+&quot;format&quot;:{
+&quot;desc&quot;:&quot;&lt;code&gt;text&lt;/code&gt; - show the read value as is.&lt;br /&gt;&lt;code&gt;alt&lt;/code&gt; - Lookup the description for the read value in the &lt;code&gt;values&lt;/code&gt; list. If not found display the value as is.&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;text&quot;,
+&quot;alt&quot;
+]
+},
+&quot;showValue&quot;:{
+&quot;desc&quot;:&quot;If True prepend the value in front of the description separated by colon.&lt;br /&gt; Example: &lt;code&gt;0: Status OK&lt;/code&gt;&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;tabDimensions&quot;:{
+&quot;tab_minsize&quot;:0,
+&quot;windowHeight&quot;:272,
+&quot;windowWidth&quot;:278
+},
+&quot;updateType&quot;:&quot;Partial&quot;,
+&quot;values&quot;:{
+&quot;columns&quot;:{
+&quot;desc&quot;:{
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;string&quot;
+},
+&quot;value&quot;:{
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;string&quot;
+}
+},
+&quot;desc&quot;:&quot;List of value:desc pairs where the description is looked up when the value is read.&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;table&quot;
+}
+},
+&quot;options&quot;:{
+&quot;format&quot;:&quot;text&quot;,
+&quot;showValue&quot;:&quot;False&quot;,
+&quot;values&quot;:[]
+}
+}</desc>
+      <text
+         rexsvg:tag="display"
+         y="19.401041"
+         x="-25.914042"
+         id="text3689-3-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">XXX DISPLAY STRING XXX</text>
+    </g>
+    <g
+       id="Button"
+       transform="matrix(1.3966131,0,0,1.3966131,41.98591,509.47796)"
+       rexsvg:module="Button"
+       rexsvg:filename="Button.svg"
+       rexsvg:version="12">
+      <title
+         id="title2990-25">TS1 Load</title>
+      <desc
+         id="desc3795-2">{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:&quot;&quot;,
+&quot;hide_by&quot;:&quot;&quot;,
+&quot;refresh_from&quot;:&quot;&quot;,
+&quot;value&quot;:&quot;TS1_LP&quot;
+},
+&quot;metaData&quot;:{
+&quot;colorFalse&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is OFF&quot;,
+&quot;order&quot;:&quot;06&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;colorTrue&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is ON&quot;,
+&quot;order&quot;:&quot;07&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;connections&quot;:{
+&quot;disable_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is disabled.&quot;,
+&quot;optional&quot;:true
+},
+&quot;hide_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
+&quot;optional&quot;:true
+},
+&quot;refresh_from&quot;:{
+&quot;desc&quot;:&quot;If set the state of the component is updated based on the value read from this datapoint. Otherwise the value from main datapoint is used.&quot;,
+&quot;optional&quot;:true,
+&quot;order&quot;:&quot;02&quot;,
+&quot;prev&quot;:[
+&quot;BUTTON_R&quot;
+]
+},
+&quot;value&quot;:{
+&quot;desc&quot;:&quot;The main datapoint where boolean value is written.&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;prev&quot;:[
+&quot;BUTTON&quot;
+],
+&quot;write&quot;:true
+}
+},
+&quot;desc&quot;:&quot;The Button component changes the boolean value. Normally the ON state means TRUE value and OFF mean FALSE value. If needed the parameter &lt;code&gt;reverseMeaning&lt;/code&gt; switches the written values.&lt;br /&gt; There are three different modes of operation: &lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; always write TRUE value after button is pressed, release is ignored.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
+&quot;fontScale&quot;:{
+&quot;desc&quot;:&quot;Use this parameter to scale font because the button is using HTML button component which is not binded with SVG. &quot;,
+&quot;order&quot;:&quot;03&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;labelColorFalse&quot;:{
+&quot;desc&quot;:&quot;Label (text) color when the state is OFF.&quot;,
+&quot;order&quot;:&quot;08&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;labelColorTrue&quot;:{
+&quot;desc&quot;:&quot;Label (text) color when the state is ON&quot;,
+&quot;order&quot;:&quot;09&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;labelFalse&quot;:{
+&quot;desc&quot;:&quot;Button label when the state is OFF&quot;,
+&quot;order&quot;:&quot;04&quot;,
+&quot;prev&quot;:[
+&quot;text&quot;
+],
+&quot;type&quot;:&quot;str&quot;
+},
+&quot;labelTrue&quot;:{
+&quot;desc&quot;:&quot;Button label when the state is ON. If not defined the &lt;code&gt;labelFalse&lt;/code&gt; is used.&quot;,
+&quot;order&quot;:&quot;05&quot;,
+&quot;type&quot;:&quot;str&quot;
+},
+&quot;reverseMeaning&quot;:{
+&quot;desc&quot;:&quot;If True the meaning of the value is switched. So the ON state is False and OFF state is True.&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;type&quot;:{
+&quot;desc&quot;:&quot;Changes the type of the Button.&lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; writes TRUE value once after button is pressed, release is ignored.&lt;br /&gt;&lt;code&gt;ManualPulseRpt&lt;/code&gt; writes TRUE value periodically (20ms period) after button is pressed, release stops writing.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;PushButton&quot;,
+&quot;ManualPulse&quot;,
+&quot;ManualPulseRpt&quot;,
+&quot;ToggleButton&quot;
+]
+},
+&quot;writePerm&quot;:{
+&quot;columns&quot;:{
+&quot;login&quot;:{
+&quot;type&quot;:&quot;str&quot;
+}
+},
+&quot;desc&quot;:&quot;List of logins who are allowed to write to the data point. If not in list the Button will be disabled.&quot;,
+&quot;order&quot;:&quot;10&quot;,
+&quot;type&quot;:&quot;table&quot;
+}
+},
+&quot;options&quot;:{
+&quot;colorFalse&quot;:&quot;#FFFFFF&quot;,
+&quot;colorTrue&quot;:&quot;#00C8B4&quot;,
+&quot;fontScale&quot;:1,
+&quot;labelColorFalse&quot;:&quot;#000000&quot;,
+&quot;labelColorTrue&quot;:&quot;#FFFFFF&quot;,
+&quot;labelFalse&quot;:&quot;TS1 LOAD&quot;,
+&quot;labelTrue&quot;:&quot;&quot;,
+&quot;reverseMeaning&quot;:&quot;False&quot;,
+&quot;type&quot;:&quot;PushButton&quot;,
+&quot;writePerm&quot;:[]
+}
+}</desc>
+      <rect
+         y="0"
+         x="0.00084454822"
+         height="42.276619"
+         width="92.869949"
+         id="rect3010-79"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="Text-1-9"
+         y="25.128874"
+         x="46.150532"
+         xml:space="preserve"
+         inkscape:label="#text3012"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:15.27504921px;font-family:Roboto;-inkscape-font-specification:'Roboto, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"><tspan
+           y="25.128874"
+           x="46.150532"
+           id="tspan3014-9"
+           sodipodi:role="line">TS1 LOAD</tspan></text>
+    </g>
+    <g
+       id="Button-1"
+       transform="matrix(1.3966131,0,0,1.3966131,247.68932,509.47796)"
+       rexsvg:module="Button"
+       rexsvg:filename="Button.svg"
+       rexsvg:version="12">
+      <title
+         id="title2990-25-7">TS1 Save</title>
+      <desc
+         id="desc3795-2-9">{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:&quot;&quot;,
+&quot;hide_by&quot;:&quot;&quot;,
+&quot;refresh_from&quot;:&quot;&quot;,
+&quot;value&quot;:&quot;TS1_SP&quot;
+},
+&quot;metaData&quot;:{
+&quot;colorFalse&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is OFF&quot;,
+&quot;order&quot;:&quot;06&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;colorTrue&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is ON&quot;,
+&quot;order&quot;:&quot;07&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;connections&quot;:{
+&quot;disable_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is disabled.&quot;,
+&quot;optional&quot;:true
+},
+&quot;hide_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
+&quot;optional&quot;:true
+},
+&quot;refresh_from&quot;:{
+&quot;desc&quot;:&quot;If set the state of the component is updated based on the value read from this datapoint. Otherwise the value from main datapoint is used.&quot;,
+&quot;optional&quot;:true,
+&quot;order&quot;:&quot;02&quot;,
+&quot;prev&quot;:[
+&quot;BUTTON_R&quot;
+]
+},
+&quot;value&quot;:{
+&quot;desc&quot;:&quot;The main datapoint where boolean value is written.&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;prev&quot;:[
+&quot;BUTTON&quot;
+],
+&quot;write&quot;:true
+}
+},
+&quot;desc&quot;:&quot;The Button component changes the boolean value. Normally the ON state means TRUE value and OFF mean FALSE value. If needed the parameter &lt;code&gt;reverseMeaning&lt;/code&gt; switches the written values.&lt;br /&gt; There are three different modes of operation: &lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; always write TRUE value after button is pressed, release is ignored.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
+&quot;fontScale&quot;:{
+&quot;desc&quot;:&quot;Use this parameter to scale font because the button is using HTML button component which is not binded with SVG. &quot;,
+&quot;order&quot;:&quot;03&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;labelColorFalse&quot;:{
+&quot;desc&quot;:&quot;Label (text) color when the state is OFF.&quot;,
+&quot;order&quot;:&quot;08&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;labelColorTrue&quot;:{
+&quot;desc&quot;:&quot;Label (text) color when the state is ON&quot;,
+&quot;order&quot;:&quot;09&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;labelFalse&quot;:{
+&quot;desc&quot;:&quot;Button label when the state is OFF&quot;,
+&quot;order&quot;:&quot;04&quot;,
+&quot;prev&quot;:[
+&quot;text&quot;
+],
+&quot;type&quot;:&quot;str&quot;
+},
+&quot;labelTrue&quot;:{
+&quot;desc&quot;:&quot;Button label when the state is ON. If not defined the &lt;code&gt;labelFalse&lt;/code&gt; is used.&quot;,
+&quot;order&quot;:&quot;05&quot;,
+&quot;type&quot;:&quot;str&quot;
+},
+&quot;reverseMeaning&quot;:{
+&quot;desc&quot;:&quot;If True the meaning of the value is switched. So the ON state is False and OFF state is True.&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;type&quot;:{
+&quot;desc&quot;:&quot;Changes the type of the Button.&lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; writes TRUE value once after button is pressed, release is ignored.&lt;br /&gt;&lt;code&gt;ManualPulseRpt&lt;/code&gt; writes TRUE value periodically (20ms period) after button is pressed, release stops writing.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;PushButton&quot;,
+&quot;ManualPulse&quot;,
+&quot;ManualPulseRpt&quot;,
+&quot;ToggleButton&quot;
+]
+},
+&quot;writePerm&quot;:{
+&quot;columns&quot;:{
+&quot;login&quot;:{
+&quot;type&quot;:&quot;str&quot;
+}
+},
+&quot;desc&quot;:&quot;List of logins who are allowed to write to the data point. If not in list the Button will be disabled.&quot;,
+&quot;order&quot;:&quot;10&quot;,
+&quot;type&quot;:&quot;table&quot;
+}
+},
+&quot;options&quot;:{
+&quot;colorFalse&quot;:&quot;#FFFFFF&quot;,
+&quot;colorTrue&quot;:&quot;#00C8B4&quot;,
+&quot;fontScale&quot;:1,
+&quot;labelColorFalse&quot;:&quot;#000000&quot;,
+&quot;labelColorTrue&quot;:&quot;#FFFFFF&quot;,
+&quot;labelFalse&quot;:&quot;TS1 SAVE&quot;,
+&quot;labelTrue&quot;:&quot;&quot;,
+&quot;reverseMeaning&quot;:&quot;False&quot;,
+&quot;type&quot;:&quot;PushButton&quot;,
+&quot;writePerm&quot;:[]
+}
+}</desc>
+      <rect
+         y="0"
+         x="0.00084454822"
+         height="42.276619"
+         width="92.869949"
+         id="rect3010-79-1"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="Text-1-9-5"
+         y="25.128874"
+         x="46.150532"
+         xml:space="preserve"
+         inkscape:label="#text3012"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:15.27504921px;font-family:Roboto;-inkscape-font-specification:'Roboto, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"><tspan
+           y="25.128874"
+           x="46.150532"
+           id="tspan3014-9-6"
+           sodipodi:role="line">TS1 SAVE</tspan></text>
+    </g>
+    <g
+       id="Button-9"
+       transform="matrix(1.3966131,0,0,1.3966131,448.29542,508.47796)"
+       rexsvg:module="Button"
+       rexsvg:filename="Button.svg"
+       rexsvg:version="12">
+      <title
+         id="title2990-25-5">TS2 Load</title>
+      <desc
+         id="desc3795-2-5">{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:&quot;&quot;,
+&quot;hide_by&quot;:&quot;&quot;,
+&quot;refresh_from&quot;:&quot;&quot;,
+&quot;value&quot;:&quot;TS2_LP&quot;
+},
+&quot;metaData&quot;:{
+&quot;colorFalse&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is OFF&quot;,
+&quot;order&quot;:&quot;06&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;colorTrue&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is ON&quot;,
+&quot;order&quot;:&quot;07&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;connections&quot;:{
+&quot;disable_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is disabled.&quot;,
+&quot;optional&quot;:true
+},
+&quot;hide_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
+&quot;optional&quot;:true
+},
+&quot;refresh_from&quot;:{
+&quot;desc&quot;:&quot;If set the state of the component is updated based on the value read from this datapoint. Otherwise the value from main datapoint is used.&quot;,
+&quot;optional&quot;:true,
+&quot;order&quot;:&quot;02&quot;,
+&quot;prev&quot;:[
+&quot;BUTTON_R&quot;
+]
+},
+&quot;value&quot;:{
+&quot;desc&quot;:&quot;The main datapoint where boolean value is written.&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;prev&quot;:[
+&quot;BUTTON&quot;
+],
+&quot;write&quot;:true
+}
+},
+&quot;desc&quot;:&quot;The Button component changes the boolean value. Normally the ON state means TRUE value and OFF mean FALSE value. If needed the parameter &lt;code&gt;reverseMeaning&lt;/code&gt; switches the written values.&lt;br /&gt; There are three different modes of operation: &lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; always write TRUE value after button is pressed, release is ignored.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
+&quot;fontScale&quot;:{
+&quot;desc&quot;:&quot;Use this parameter to scale font because the button is using HTML button component which is not binded with SVG. &quot;,
+&quot;order&quot;:&quot;03&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;labelColorFalse&quot;:{
+&quot;desc&quot;:&quot;Label (text) color when the state is OFF.&quot;,
+&quot;order&quot;:&quot;08&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;labelColorTrue&quot;:{
+&quot;desc&quot;:&quot;Label (text) color when the state is ON&quot;,
+&quot;order&quot;:&quot;09&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;labelFalse&quot;:{
+&quot;desc&quot;:&quot;Button label when the state is OFF&quot;,
+&quot;order&quot;:&quot;04&quot;,
+&quot;prev&quot;:[
+&quot;text&quot;
+],
+&quot;type&quot;:&quot;str&quot;
+},
+&quot;labelTrue&quot;:{
+&quot;desc&quot;:&quot;Button label when the state is ON. If not defined the &lt;code&gt;labelFalse&lt;/code&gt; is used.&quot;,
+&quot;order&quot;:&quot;05&quot;,
+&quot;type&quot;:&quot;str&quot;
+},
+&quot;reverseMeaning&quot;:{
+&quot;desc&quot;:&quot;If True the meaning of the value is switched. So the ON state is False and OFF state is True.&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;type&quot;:{
+&quot;desc&quot;:&quot;Changes the type of the Button.&lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; writes TRUE value once after button is pressed, release is ignored.&lt;br /&gt;&lt;code&gt;ManualPulseRpt&lt;/code&gt; writes TRUE value periodically (20ms period) after button is pressed, release stops writing.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;PushButton&quot;,
+&quot;ManualPulse&quot;,
+&quot;ManualPulseRpt&quot;,
+&quot;ToggleButton&quot;
+]
+},
+&quot;writePerm&quot;:{
+&quot;columns&quot;:{
+&quot;login&quot;:{
+&quot;type&quot;:&quot;str&quot;
+}
+},
+&quot;desc&quot;:&quot;List of logins who are allowed to write to the data point. If not in list the Button will be disabled.&quot;,
+&quot;order&quot;:&quot;10&quot;,
+&quot;type&quot;:&quot;table&quot;
+}
+},
+&quot;options&quot;:{
+&quot;colorFalse&quot;:&quot;#FFFFFF&quot;,
+&quot;colorTrue&quot;:&quot;#00C8B4&quot;,
+&quot;fontScale&quot;:1,
+&quot;labelColorFalse&quot;:&quot;#000000&quot;,
+&quot;labelColorTrue&quot;:&quot;#FFFFFF&quot;,
+&quot;labelFalse&quot;:&quot;TS2 LOAD&quot;,
+&quot;labelTrue&quot;:&quot;&quot;,
+&quot;reverseMeaning&quot;:&quot;False&quot;,
+&quot;type&quot;:&quot;PushButton&quot;,
+&quot;writePerm&quot;:[]
+}
+}</desc>
+      <rect
+         y="0"
+         x="0.00084454822"
+         height="42.276619"
+         width="92.869949"
+         id="rect3010-79-8"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="Text-1-9-4"
+         y="25.128874"
+         x="46.150532"
+         xml:space="preserve"
+         inkscape:label="#text3012"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:15.27504921px;font-family:Roboto;-inkscape-font-specification:'Roboto, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"><tspan
+           y="25.128874"
+           x="46.150532"
+           id="tspan3014-9-61"
+           sodipodi:role="line">TS2 LOAD</tspan></text>
+    </g>
+    <g
+       id="Button-1-8"
+       transform="matrix(1.3966131,0,0,1.3966131,653.99883,508.47796)"
+       rexsvg:module="Button"
+       rexsvg:filename="Button.svg"
+       rexsvg:version="12">
+      <title
+         id="title2990-25-7-9">TS2 Save</title>
+      <desc
+         id="desc3795-2-9-0">{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:&quot;&quot;,
+&quot;hide_by&quot;:&quot;&quot;,
+&quot;refresh_from&quot;:&quot;&quot;,
+&quot;value&quot;:&quot;TS2_SP&quot;
+},
+&quot;metaData&quot;:{
+&quot;colorFalse&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is OFF&quot;,
+&quot;order&quot;:&quot;06&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;colorTrue&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is ON&quot;,
+&quot;order&quot;:&quot;07&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;connections&quot;:{
+&quot;disable_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is disabled.&quot;,
+&quot;optional&quot;:true
+},
+&quot;hide_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
+&quot;optional&quot;:true
+},
+&quot;refresh_from&quot;:{
+&quot;desc&quot;:&quot;If set the state of the component is updated based on the value read from this datapoint. Otherwise the value from main datapoint is used.&quot;,
+&quot;optional&quot;:true,
+&quot;order&quot;:&quot;02&quot;,
+&quot;prev&quot;:[
+&quot;BUTTON_R&quot;
+]
+},
+&quot;value&quot;:{
+&quot;desc&quot;:&quot;The main datapoint where boolean value is written.&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;prev&quot;:[
+&quot;BUTTON&quot;
+],
+&quot;write&quot;:true
+}
+},
+&quot;desc&quot;:&quot;The Button component changes the boolean value. Normally the ON state means TRUE value and OFF mean FALSE value. If needed the parameter &lt;code&gt;reverseMeaning&lt;/code&gt; switches the written values.&lt;br /&gt; There are three different modes of operation: &lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; always write TRUE value after button is pressed, release is ignored.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
+&quot;fontScale&quot;:{
+&quot;desc&quot;:&quot;Use this parameter to scale font because the button is using HTML button component which is not binded with SVG. &quot;,
+&quot;order&quot;:&quot;03&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;labelColorFalse&quot;:{
+&quot;desc&quot;:&quot;Label (text) color when the state is OFF.&quot;,
+&quot;order&quot;:&quot;08&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;labelColorTrue&quot;:{
+&quot;desc&quot;:&quot;Label (text) color when the state is ON&quot;,
+&quot;order&quot;:&quot;09&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;labelFalse&quot;:{
+&quot;desc&quot;:&quot;Button label when the state is OFF&quot;,
+&quot;order&quot;:&quot;04&quot;,
+&quot;prev&quot;:[
+&quot;text&quot;
+],
+&quot;type&quot;:&quot;str&quot;
+},
+&quot;labelTrue&quot;:{
+&quot;desc&quot;:&quot;Button label when the state is ON. If not defined the &lt;code&gt;labelFalse&lt;/code&gt; is used.&quot;,
+&quot;order&quot;:&quot;05&quot;,
+&quot;type&quot;:&quot;str&quot;
+},
+&quot;reverseMeaning&quot;:{
+&quot;desc&quot;:&quot;If True the meaning of the value is switched. So the ON state is False and OFF state is True.&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;type&quot;:{
+&quot;desc&quot;:&quot;Changes the type of the Button.&lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; writes TRUE value once after button is pressed, release is ignored.&lt;br /&gt;&lt;code&gt;ManualPulseRpt&lt;/code&gt; writes TRUE value periodically (20ms period) after button is pressed, release stops writing.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;PushButton&quot;,
+&quot;ManualPulse&quot;,
+&quot;ManualPulseRpt&quot;,
+&quot;ToggleButton&quot;
+]
+},
+&quot;writePerm&quot;:{
+&quot;columns&quot;:{
+&quot;login&quot;:{
+&quot;type&quot;:&quot;str&quot;
+}
+},
+&quot;desc&quot;:&quot;List of logins who are allowed to write to the data point. If not in list the Button will be disabled.&quot;,
+&quot;order&quot;:&quot;10&quot;,
+&quot;type&quot;:&quot;table&quot;
+}
+},
+&quot;options&quot;:{
+&quot;colorFalse&quot;:&quot;#FFFFFF&quot;,
+&quot;colorTrue&quot;:&quot;#00C8B4&quot;,
+&quot;fontScale&quot;:1,
+&quot;labelColorFalse&quot;:&quot;#000000&quot;,
+&quot;labelColorTrue&quot;:&quot;#FFFFFF&quot;,
+&quot;labelFalse&quot;:&quot;TS2 SAVE&quot;,
+&quot;labelTrue&quot;:&quot;&quot;,
+&quot;reverseMeaning&quot;:&quot;False&quot;,
+&quot;type&quot;:&quot;PushButton&quot;,
+&quot;writePerm&quot;:[]
+}
+}</desc>
+      <rect
+         y="0"
+         x="0.00084454822"
+         height="42.276619"
+         width="92.869949"
+         id="rect3010-79-1-1"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="Text-1-9-5-0"
+         y="25.128874"
+         x="46.150532"
+         xml:space="preserve"
+         inkscape:label="#text3012"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:15.27504921px;font-family:Roboto;-inkscape-font-specification:'Roboto, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"><tspan
+           y="25.128874"
+           x="46.150532"
+           id="tspan3014-9-6-7"
+           sodipodi:role="line">TS2 SAVE</tspan></text>
+    </g>
+    <g
+       id="Button-0"
+       transform="matrix(1.3966131,0,0,1.3966131,840.29542,508.47796)"
+       rexsvg:module="Button"
+       rexsvg:filename="Button.svg"
+       rexsvg:version="12">
+      <title
+         id="title2990-25-0">DS1 Load</title>
+      <desc
+         id="desc3795-2-3">{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:&quot;&quot;,
+&quot;hide_by&quot;:&quot;&quot;,
+&quot;refresh_from&quot;:&quot;&quot;,
+&quot;value&quot;:&quot;DS1_LP&quot;
+},
+&quot;metaData&quot;:{
+&quot;colorFalse&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is OFF&quot;,
+&quot;order&quot;:&quot;06&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;colorTrue&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is ON&quot;,
+&quot;order&quot;:&quot;07&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;connections&quot;:{
+&quot;disable_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is disabled.&quot;,
+&quot;optional&quot;:true
+},
+&quot;hide_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
+&quot;optional&quot;:true
+},
+&quot;refresh_from&quot;:{
+&quot;desc&quot;:&quot;If set the state of the component is updated based on the value read from this datapoint. Otherwise the value from main datapoint is used.&quot;,
+&quot;optional&quot;:true,
+&quot;order&quot;:&quot;02&quot;,
+&quot;prev&quot;:[
+&quot;BUTTON_R&quot;
+]
+},
+&quot;value&quot;:{
+&quot;desc&quot;:&quot;The main datapoint where boolean value is written.&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;prev&quot;:[
+&quot;BUTTON&quot;
+],
+&quot;write&quot;:true
+}
+},
+&quot;desc&quot;:&quot;The Button component changes the boolean value. Normally the ON state means TRUE value and OFF mean FALSE value. If needed the parameter &lt;code&gt;reverseMeaning&lt;/code&gt; switches the written values.&lt;br /&gt; There are three different modes of operation: &lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; always write TRUE value after button is pressed, release is ignored.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
+&quot;fontScale&quot;:{
+&quot;desc&quot;:&quot;Use this parameter to scale font because the button is using HTML button component which is not binded with SVG. &quot;,
+&quot;order&quot;:&quot;03&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;labelColorFalse&quot;:{
+&quot;desc&quot;:&quot;Label (text) color when the state is OFF.&quot;,
+&quot;order&quot;:&quot;08&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;labelColorTrue&quot;:{
+&quot;desc&quot;:&quot;Label (text) color when the state is ON&quot;,
+&quot;order&quot;:&quot;09&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;labelFalse&quot;:{
+&quot;desc&quot;:&quot;Button label when the state is OFF&quot;,
+&quot;order&quot;:&quot;04&quot;,
+&quot;prev&quot;:[
+&quot;text&quot;
+],
+&quot;type&quot;:&quot;str&quot;
+},
+&quot;labelTrue&quot;:{
+&quot;desc&quot;:&quot;Button label when the state is ON. If not defined the &lt;code&gt;labelFalse&lt;/code&gt; is used.&quot;,
+&quot;order&quot;:&quot;05&quot;,
+&quot;type&quot;:&quot;str&quot;
+},
+&quot;reverseMeaning&quot;:{
+&quot;desc&quot;:&quot;If True the meaning of the value is switched. So the ON state is False and OFF state is True.&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;type&quot;:{
+&quot;desc&quot;:&quot;Changes the type of the Button.&lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; writes TRUE value once after button is pressed, release is ignored.&lt;br /&gt;&lt;code&gt;ManualPulseRpt&lt;/code&gt; writes TRUE value periodically (20ms period) after button is pressed, release stops writing.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;PushButton&quot;,
+&quot;ManualPulse&quot;,
+&quot;ManualPulseRpt&quot;,
+&quot;ToggleButton&quot;
+]
+},
+&quot;writePerm&quot;:{
+&quot;columns&quot;:{
+&quot;login&quot;:{
+&quot;type&quot;:&quot;str&quot;
+}
+},
+&quot;desc&quot;:&quot;List of logins who are allowed to write to the data point. If not in list the Button will be disabled.&quot;,
+&quot;order&quot;:&quot;10&quot;,
+&quot;type&quot;:&quot;table&quot;
+}
+},
+&quot;options&quot;:{
+&quot;colorFalse&quot;:&quot;#FFFFFF&quot;,
+&quot;colorTrue&quot;:&quot;#00C8B4&quot;,
+&quot;fontScale&quot;:1,
+&quot;labelColorFalse&quot;:&quot;#000000&quot;,
+&quot;labelColorTrue&quot;:&quot;#FFFFFF&quot;,
+&quot;labelFalse&quot;:&quot;DS1 LOAD&quot;,
+&quot;labelTrue&quot;:&quot;&quot;,
+&quot;reverseMeaning&quot;:&quot;False&quot;,
+&quot;type&quot;:&quot;PushButton&quot;,
+&quot;writePerm&quot;:[]
+}
+}</desc>
+      <rect
+         y="0"
+         x="0.00084454822"
+         height="42.276619"
+         width="92.869949"
+         id="rect3010-79-86"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="Text-1-9-3"
+         y="25.128874"
+         x="46.150532"
+         xml:space="preserve"
+         inkscape:label="#text3012"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:15.27504921px;font-family:Roboto;-inkscape-font-specification:'Roboto, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"><tspan
+           y="25.128874"
+           x="46.150532"
+           id="tspan3014-9-1"
+           sodipodi:role="line">DS1 LOAD</tspan></text>
+    </g>
+    <g
+       id="Button-1-4"
+       transform="matrix(1.3966131,0,0,1.3966131,1045.9988,508.47796)"
+       rexsvg:module="Button"
+       rexsvg:filename="Button.svg"
+       rexsvg:version="12">
+      <title
+         id="title2990-25-7-5">DS1 Save</title>
+      <desc
+         id="desc3795-2-9-02">{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:&quot;&quot;,
+&quot;hide_by&quot;:&quot;&quot;,
+&quot;refresh_from&quot;:&quot;&quot;,
+&quot;value&quot;:&quot;DS1_SP&quot;
+},
+&quot;metaData&quot;:{
+&quot;colorFalse&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is OFF&quot;,
+&quot;order&quot;:&quot;06&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;colorTrue&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is ON&quot;,
+&quot;order&quot;:&quot;07&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;connections&quot;:{
+&quot;disable_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is disabled.&quot;,
+&quot;optional&quot;:true
+},
+&quot;hide_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
+&quot;optional&quot;:true
+},
+&quot;refresh_from&quot;:{
+&quot;desc&quot;:&quot;If set the state of the component is updated based on the value read from this datapoint. Otherwise the value from main datapoint is used.&quot;,
+&quot;optional&quot;:true,
+&quot;order&quot;:&quot;02&quot;,
+&quot;prev&quot;:[
+&quot;BUTTON_R&quot;
+]
+},
+&quot;value&quot;:{
+&quot;desc&quot;:&quot;The main datapoint where boolean value is written.&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;prev&quot;:[
+&quot;BUTTON&quot;
+],
+&quot;write&quot;:true
+}
+},
+&quot;desc&quot;:&quot;The Button component changes the boolean value. Normally the ON state means TRUE value and OFF mean FALSE value. If needed the parameter &lt;code&gt;reverseMeaning&lt;/code&gt; switches the written values.&lt;br /&gt; There are three different modes of operation: &lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; always write TRUE value after button is pressed, release is ignored.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
+&quot;fontScale&quot;:{
+&quot;desc&quot;:&quot;Use this parameter to scale font because the button is using HTML button component which is not binded with SVG. &quot;,
+&quot;order&quot;:&quot;03&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;labelColorFalse&quot;:{
+&quot;desc&quot;:&quot;Label (text) color when the state is OFF.&quot;,
+&quot;order&quot;:&quot;08&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;labelColorTrue&quot;:{
+&quot;desc&quot;:&quot;Label (text) color when the state is ON&quot;,
+&quot;order&quot;:&quot;09&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;labelFalse&quot;:{
+&quot;desc&quot;:&quot;Button label when the state is OFF&quot;,
+&quot;order&quot;:&quot;04&quot;,
+&quot;prev&quot;:[
+&quot;text&quot;
+],
+&quot;type&quot;:&quot;str&quot;
+},
+&quot;labelTrue&quot;:{
+&quot;desc&quot;:&quot;Button label when the state is ON. If not defined the &lt;code&gt;labelFalse&lt;/code&gt; is used.&quot;,
+&quot;order&quot;:&quot;05&quot;,
+&quot;type&quot;:&quot;str&quot;
+},
+&quot;reverseMeaning&quot;:{
+&quot;desc&quot;:&quot;If True the meaning of the value is switched. So the ON state is False and OFF state is True.&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;type&quot;:{
+&quot;desc&quot;:&quot;Changes the type of the Button.&lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; writes TRUE value once after button is pressed, release is ignored.&lt;br /&gt;&lt;code&gt;ManualPulseRpt&lt;/code&gt; writes TRUE value periodically (20ms period) after button is pressed, release stops writing.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;PushButton&quot;,
+&quot;ManualPulse&quot;,
+&quot;ManualPulseRpt&quot;,
+&quot;ToggleButton&quot;
+]
+},
+&quot;writePerm&quot;:{
+&quot;columns&quot;:{
+&quot;login&quot;:{
+&quot;type&quot;:&quot;str&quot;
+}
+},
+&quot;desc&quot;:&quot;List of logins who are allowed to write to the data point. If not in list the Button will be disabled.&quot;,
+&quot;order&quot;:&quot;10&quot;,
+&quot;type&quot;:&quot;table&quot;
+}
+},
+&quot;options&quot;:{
+&quot;colorFalse&quot;:&quot;#FFFFFF&quot;,
+&quot;colorTrue&quot;:&quot;#00C8B4&quot;,
+&quot;fontScale&quot;:1,
+&quot;labelColorFalse&quot;:&quot;#000000&quot;,
+&quot;labelColorTrue&quot;:&quot;#FFFFFF&quot;,
+&quot;labelFalse&quot;:&quot;DS1 SAVE&quot;,
+&quot;labelTrue&quot;:&quot;&quot;,
+&quot;reverseMeaning&quot;:&quot;False&quot;,
+&quot;type&quot;:&quot;PushButton&quot;,
+&quot;writePerm&quot;:[]
+}
+}</desc>
+      <rect
+         y="0"
+         x="0.00084454822"
+         height="42.276619"
+         width="92.869949"
+         id="rect3010-79-1-0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="Text-1-9-5-4"
+         y="25.128874"
+         x="46.150532"
+         xml:space="preserve"
+         inkscape:label="#text3012"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:15.27504921px;font-family:Roboto;-inkscape-font-specification:'Roboto, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"><tspan
+           y="25.128874"
+           x="46.150532"
+           id="tspan3014-9-6-3"
+           sodipodi:role="line">DS1 SAVE</tspan></text>
+    </g>
+    <g
+       rexsvg:version="12"
+       rexsvg:filename="Button.svg"
+       rexsvg:module="Button"
+       transform="matrix(1.3966131,0,0,1.3966131,569.14713,636.47796)"
+       id="Button-7">
+      <title
+         id="title2990-0">OWS SERVER RELOAD</title>
+      <desc
+         id="desc3795-3">{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:&quot;&quot;,
+&quot;hide_by&quot;:&quot;&quot;,
+&quot;refresh_from&quot;:&quot;&quot;,
+&quot;value&quot;:&quot;OWS_SVR_PB&quot;
+},
+&quot;metaData&quot;:{
+&quot;colorFalse&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is OFF&quot;,
+&quot;order&quot;:&quot;06&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;colorTrue&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is ON&quot;,
+&quot;order&quot;:&quot;07&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;connections&quot;:{
+&quot;disable_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is disabled.&quot;,
+&quot;optional&quot;:true
+},
+&quot;hide_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
+&quot;optional&quot;:true
+},
+&quot;refresh_from&quot;:{
+&quot;desc&quot;:&quot;If set the state of the component is updated based on the value read from this datapoint. Otherwise the value from main datapoint is used.&quot;,
+&quot;optional&quot;:true,
+&quot;order&quot;:&quot;02&quot;,
+&quot;prev&quot;:[
+&quot;BUTTON_R&quot;
+]
+},
+&quot;value&quot;:{
+&quot;desc&quot;:&quot;The main datapoint where boolean value is written.&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;prev&quot;:[
+&quot;BUTTON&quot;
+],
+&quot;write&quot;:true
+}
+},
+&quot;desc&quot;:&quot;The Button component changes the boolean value. Normally the ON state means TRUE value and OFF mean FALSE value. If needed the parameter &lt;code&gt;reverseMeaning&lt;/code&gt; switches the written values.&lt;br /&gt; There are three different modes of operation: &lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; always write TRUE value after button is pressed, release is ignored.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
+&quot;fontScale&quot;:{
+&quot;desc&quot;:&quot;Use this parameter to scale font because the button is using HTML button component which is not binded with SVG. &quot;,
+&quot;order&quot;:&quot;03&quot;,
+&quot;type&quot;:&quot;float&quot;
+},
+&quot;labelColorFalse&quot;:{
+&quot;desc&quot;:&quot;Label (text) color when the state is OFF.&quot;,
+&quot;order&quot;:&quot;08&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;labelColorTrue&quot;:{
+&quot;desc&quot;:&quot;Label (text) color when the state is ON&quot;,
+&quot;order&quot;:&quot;09&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;labelFalse&quot;:{
+&quot;desc&quot;:&quot;Button label when the state is OFF&quot;,
+&quot;order&quot;:&quot;04&quot;,
+&quot;prev&quot;:[
+&quot;text&quot;
+],
+&quot;type&quot;:&quot;str&quot;
+},
+&quot;labelTrue&quot;:{
+&quot;desc&quot;:&quot;Button label when the state is ON. If not defined the &lt;code&gt;labelFalse&lt;/code&gt; is used.&quot;,
+&quot;order&quot;:&quot;05&quot;,
+&quot;type&quot;:&quot;str&quot;
+},
+&quot;reverseMeaning&quot;:{
+&quot;desc&quot;:&quot;If True the meaning of the value is switched. So the ON state is False and OFF state is True.&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;type&quot;:{
+&quot;desc&quot;:&quot;Changes the type of the Button.&lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; writes TRUE value once after button is pressed, release is ignored.&lt;br /&gt;&lt;code&gt;ManualPulseRpt&lt;/code&gt; writes TRUE value periodically (20ms period) after button is pressed, release stops writing.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;PushButton&quot;,
+&quot;ManualPulse&quot;,
+&quot;ManualPulseRpt&quot;,
+&quot;ToggleButton&quot;
+]
+},
+&quot;writePerm&quot;:{
+&quot;columns&quot;:{
+&quot;login&quot;:{
+&quot;type&quot;:&quot;str&quot;
+}
+},
+&quot;desc&quot;:&quot;List of logins who are allowed to write to the data point. If not in list the Button will be disabled.&quot;,
+&quot;order&quot;:&quot;10&quot;,
+&quot;type&quot;:&quot;table&quot;
+}
+},
+&quot;options&quot;:{
+&quot;colorFalse&quot;:&quot;#FFFFFF&quot;,
+&quot;colorTrue&quot;:&quot;#00C8B4&quot;,
+&quot;fontScale&quot;:0.75,
+&quot;labelColorFalse&quot;:&quot;#000000&quot;,
+&quot;labelColorTrue&quot;:&quot;#FFFFFF&quot;,
+&quot;labelFalse&quot;:&quot;RELOAD OWS&quot;,
+&quot;labelTrue&quot;:&quot;&quot;,
+&quot;reverseMeaning&quot;:&quot;False&quot;,
+&quot;type&quot;:&quot;PushButton&quot;,
+&quot;writePerm&quot;:[]
+}
+}</desc>
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect3010-2"
+         width="92.869949"
+         height="42.276619"
+         x="0.00084454822"
+         y="0" />
+      <text
+         style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:15.27504921px;font-family:Roboto;-inkscape-font-specification:'Roboto, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"
+         inkscape:label="#text3012"
+         xml:space="preserve"
+         x="46.150532"
+         y="25.128874"
+         id="Text-1-0"><tspan
+           sodipodi:role="line"
+           id="tspan3014-1"
+           x="46.150532"
+           y="25.128874">RELOAD OWS</tspan></text>
+    </g>
+  </g>
+  <g
+     rexsvg:module="HMIConfig"
+     rexsvg:version="14"
+     rexsvg:rexversion="2.50.7-9030"
+     id="HMIConfig"
+     width="200"
+     height="80"
+     transform="translate(0,-85)"
+     sodipodi:insensitive="true">
+    <rect
+       width="200"
+       height="80"
+       rx="3"
+       ry="3"
+       id="rect3041"
+       style="fill:#ffffff;stroke:url(#lg-hmic982-72AFF2);stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="0"
+       y="0" />
+    <defs
+       id="defs35174">
+      <linearGradient
+         y2="1.5484"
+         x2="86.271103"
+         y1="-34.1563"
+         x1="24.419901"
+         gradientUnits="userSpaceOnUse"
+         id="lg-hmic_7_-72AFF2">
+        <stop
+           id="stop906"
+           style="stop-color:#0074C5"
+           offset="0.4" />
+        <stop
+           id="stop908"
+           style="stop-color:#00C8B4"
+           offset="0.95" />
+      </linearGradient>
+      <linearGradient
+         y2="5.9594998"
+         x2="83.723198"
+         y1="-29.750999"
+         x1="21.861799"
+         gradientUnits="userSpaceOnUse"
+         id="lg-hmic_6_-72AFF2">
+        <stop
+           id="stop899"
+           style="stop-color:#0074C5"
+           offset="0.4" />
+        <stop
+           id="stop901"
+           style="stop-color:#00C8B4"
+           offset="0.95" />
+      </linearGradient>
+      <linearGradient
+         y2="10.1834"
+         x2="81.286201"
+         y1="-25.5215"
+         x1="19.434601"
+         gradientUnits="userSpaceOnUse"
+         id="lg-hmic_5_-72AFF2">
+        <stop
+           id="stop892"
+           style="stop-color:#0074C5"
+           offset="0.4" />
+        <stop
+           id="stop894"
+           style="stop-color:#00C8B4"
+           offset="0.95" />
+      </linearGradient>
+      <linearGradient
+         y2="13.7713"
+         x2="79.214401"
+         y1="-21.935499"
+         x1="17.3594"
+         gradientUnits="userSpaceOnUse"
+         id="lg-hmic_4_-72AFF2">
+        <stop
+           id="stop885"
+           style="stop-color:#0074C5"
+           offset="0.4" />
+        <stop
+           id="stop887"
+           style="stop-color:#00C8B4"
+           offset="0.95" />
+      </linearGradient>
+      <linearGradient
+         y2="18.733299"
+         x2="76.349602"
+         y1="-16.971201"
+         x1="14.4985"
+         gradientUnits="userSpaceOnUse"
+         id="lg-hmic_3_-72AFF2">
+        <stop
+           id="stop878"
+           style="stop-color:#0074C5"
+           offset="0.4" />
+        <stop
+           id="stop880"
+           style="stop-color:#00C8B4"
+           offset="0.95" />
+      </linearGradient>
+      <linearGradient
+         y2="22.9674"
+         x2="73.905602"
+         y1="-12.7388"
+         x1="12.0518"
+         gradientUnits="userSpaceOnUse"
+         id="lg-hmic_2_-72AFF2">
+        <stop
+           id="stop871"
+           style="stop-color:#0074C5"
+           offset="0.4" />
+        <stop
+           id="stop873"
+           style="stop-color:#00C8B4"
+           offset="0.95" />
+      </linearGradient>
+      <linearGradient
+         y2="27.8286"
+         x2="71.097"
+         y1="-7.875"
+         x1="9.2475996"
+         gradientUnits="userSpaceOnUse"
+         id="lg-hmic_1_-72AFF2">
+        <stop
+           id="stop864"
+           style="stop-color:#0074C5"
+           offset="0.4" />
+        <stop
+           id="stop866"
+           style="stop-color:#00C8B4"
+           offset="0.95" />
+      </linearGradient>
+      <linearGradient
+         gradientTransform="translate(0,14.5)"
+         inkscape:collect="always"
+         xlink:href="#lg-hmic_1_-72AFF2"
+         id="lg-hmic982-72AFF2"
+         x1="-0.177"
+         y1="40"
+         x2="200.177"
+         y2="40"
+         gradientUnits="userSpaceOnUse" />
+      <linearGradient
+         inkscape:collect="always"
+         xlink:href="#lg-hmic_1_-72AFF2"
+         id="lg-hmic984-72AFF2"
+         gradientUnits="userSpaceOnUse"
+         x1="9.2475996"
+         y1="-7.875"
+         x2="71.097"
+         y2="27.8286" />
+    </defs>
+    <title
+       id="title3014">HMIConfig
+      </title>
+    <desc
+       id="desc3016">{
+&quot;ELEMENT_DIMENSIONS&quot;:{
+&quot;browse&quot;:{
+&quot;window&quot;:{
+&quot;height&quot;:500,
+&quot;width&quot;:520
+}
+},
+&quot;tabsizes&quot;:{
+&quot;aliastab_minsize&quot;:200,
+&quot;conntab_minsize&quot;:280,
+&quot;eltab_minsize&quot;:0
+},
+&quot;window&quot;:{
+&quot;height&quot;:500,
+&quot;width&quot;:520
+}
+},
+&quot;HMIC_DIMENSIONS&quot;:{
+&quot;browse&quot;:{
+&quot;connection&quot;:{
+&quot;col0width&quot;:150
+},
+&quot;window&quot;:{
+&quot;height&quot;:500,
+&quot;width&quot;:760
+}
+},
+&quot;connection&quot;:{
+&quot;col0width&quot;:150
+},
+&quot;option&quot;:{
+&quot;col0width&quot;:88,
+&quot;col1width&quot;:52
+},
+&quot;window&quot;:{
+&quot;height&quot;:579,
+&quot;width&quot;:500
+}
+},
+&quot;HTMLexport&quot;:{
+&quot;ExcludeDefaultLibraries&quot;:false,
+&quot;ExpertMode&quot;:false,
+&quot;Header&quot;:&quot;OwsDrv external configuration example&quot;,
+&quot;Libs&quot;:[],
+&quot;Target&quot;:&quot;hmi\\index.html&quot;,
+&quot;Template&quot;:&quot;&quot;,
+&quot;Title&quot;:&quot;OwsDrv external configuration example&quot;,
+&quot;Tooltips&quot;:true,
+&quot;ViewBox&quot;:false,
+&quot;checkedVersion&quot;:&quot;9228&quot;
+},
+&quot;UserData&quot;:{
+&quot;auth&quot;:{
+&quot;passwd&quot;:&quot;&quot;,
+&quot;username&quot;:&quot;admin&quot;
+}
+},
+&quot;connections&quot;:[
+{
+&quot;alias&quot;:&quot;DS1_LP&quot;,
+&quot;cstring&quot;:&quot;myproject_task.CNB_OWS_PATH_DS1L:YCN&quot;,
+&quot;type&quot;:&quot;W&quot;
+},
+{
+&quot;alias&quot;:&quot;DS1_SP&quot;,
+&quot;cstring&quot;:&quot;myproject_task.CNB_OWS_PATH_DS1S:YCN&quot;,
+&quot;type&quot;:&quot;W&quot;
+},
+{
+&quot;alias&quot;:&quot;INPUT_DS1&quot;,
+&quot;cstring&quot;:&quot;myproject_task.CNS_OWS_PATH_DS1:scv&quot;,
+&quot;type&quot;:&quot;W&quot;
+},
+{
+&quot;alias&quot;:&quot;INPUT_DS1SS&quot;,
+&quot;cstring&quot;:&quot;myproject_task.CNS_OWS_PATH_DS1:nmax&quot;,
+&quot;type&quot;:&quot;W&quot;
+},
+{
+&quot;alias&quot;:&quot;INPUT_DS1SY&quot;,
+&quot;cstring&quot;:&quot;myproject_task.SILOS_OWS_PATH_dS1:sy&quot;,
+&quot;type&quot;:&quot;R&quot;
+},
+{
+&quot;alias&quot;:&quot;INPUT_TS1&quot;,
+&quot;cstring&quot;:&quot;myproject_task.CNS_OWS_PATH_TS1:scv&quot;,
+&quot;type&quot;:&quot;W&quot;
+},
+{
+&quot;alias&quot;:&quot;INPUT_TS1SS&quot;,
+&quot;cstring&quot;:&quot;myproject_task.CNS_OWS_PATH_TS1:nmax&quot;,
+&quot;type&quot;:&quot;W&quot;
+},
+{
+&quot;alias&quot;:&quot;INPUT_TS1SY&quot;,
+&quot;cstring&quot;:&quot;myproject_task.SILOS_OWS_PATH_TS1:sy&quot;,
+&quot;type&quot;:&quot;R&quot;
+},
+{
+&quot;alias&quot;:&quot;INPUT_TS2&quot;,
+&quot;cstring&quot;:&quot;myproject_task.CNS_OWS_PATH_TS2:scv&quot;,
+&quot;type&quot;:&quot;W&quot;
+},
+{
+&quot;alias&quot;:&quot;INPUT_TS2SS&quot;,
+&quot;cstring&quot;:&quot;myproject_task.CNS_OWS_PATH_TS2:nmax&quot;,
+&quot;type&quot;:&quot;W&quot;
+},
+{
+&quot;alias&quot;:&quot;INPUT_TS2SY&quot;,
+&quot;cstring&quot;:&quot;myproject_task.SILOS_OWS_PATH_TS2:sy&quot;,
+&quot;type&quot;:&quot;R&quot;
+},
+{
+&quot;alias&quot;:&quot;OWS_SVR_PB&quot;,
+&quot;cstring&quot;:&quot;myproject_task.MP_OWSERVER:BSTATE&quot;,
+&quot;type&quot;:&quot;W&quot;
+},
+{
+&quot;alias&quot;:&quot;TS1&quot;,
+&quot;cstring&quot;:&quot;myproject_task.OWS__TS1:value&quot;,
+&quot;type&quot;:&quot;R&quot;
+},
+{
+&quot;alias&quot;:&quot;TS1_LP&quot;,
+&quot;cstring&quot;:&quot;myproject_task.CNB_OWS_PATH_TS1L:YCN&quot;,
+&quot;type&quot;:&quot;W&quot;
+},
+{
+&quot;alias&quot;:&quot;TS1_SP&quot;,
+&quot;cstring&quot;:&quot;myproject_task.CNB_OWS_PATH_TS1S:YCN&quot;,
+&quot;type&quot;:&quot;W&quot;
+},
+{
+&quot;alias&quot;:&quot;TS2&quot;,
+&quot;cstring&quot;:&quot;myproject_task.OWS__TS2:value&quot;,
+&quot;type&quot;:&quot;R&quot;
+},
+{
+&quot;alias&quot;:&quot;TS2_LP&quot;,
+&quot;cstring&quot;:&quot;myproject_task.CNB_OWS_PATH_TS2L:YCN&quot;,
+&quot;type&quot;:&quot;W&quot;
+},
+{
+&quot;alias&quot;:&quot;TS2_SP&quot;,
+&quot;cstring&quot;:&quot;myproject_task.CNB_OWS_PATH_TS2S:YCN&quot;,
+&quot;type&quot;:&quot;W&quot;
+},
+{
+&quot;alias&quot;:&quot;TS3&quot;,
+&quot;cstring&quot;:&quot;myproject_task.OWS__DS1:value&quot;,
+&quot;type&quot;:&quot;R&quot;
+}
+],
+&quot;metaData&quot;:{
+&quot;desc&quot;:&quot;Global RexHMI configuration component. User can change project options, configure the HTML export and define list of connections between REX target and HMI.&quot;,
+&quot;header_mode&quot;:{
+&quot;desc&quot;:&quot;Change the default size of the header (thin, packed). If packed click on the logo to show the header.&quot;,
+&quot;order&quot;:&quot;06&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;&quot;,
+&quot;thin&quot;,
+&quot;pack-top-left&quot;,
+&quot;pack-top-right&quot;,
+&quot;pack-bottom-left&quot;,
+&quot;pack-bottom-right&quot;
+]
+},
+&quot;kiosk_mode&quot;:{
+&quot;desc&quot;:&quot;If True the links from header (from logo and header) are removed and user can not change the refresh rate and target.&quot;,
+&quot;order&quot;:&quot;07&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;log_level&quot;:{
+&quot;desc&quot;:&quot;Set the global log level for whole RexHMI. The log messages are written both to the right upper corner menu and to the web browser console. Default level is INFO.&quot;,
+&quot;order&quot;:&quot;03&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;&quot;,
+&quot;TRACE&quot;,
+&quot;DEBUG&quot;,
+&quot;INFO&quot;,
+&quot;WARN&quot;,
+&quot;ERROR&quot;
+]
+},
+&quot;refresh_rate&quot;:{
+&quot;desc&quot;:&quot;Changes the default read refresh rate of the whole HMI. Default 500ms&quot;,
+&quot;max&quot;:&quot;300000&quot;,
+&quot;min&quot;:&quot;20&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;type&quot;:&quot;int&quot;
+},
+&quot;show_clock&quot;:{
+&quot;desc&quot;:&quot;If True the clock are shown in the right upper corner of the template instead of blinking square. If the target is connected the clock are updated if connection get error o lost the time stops.&quot;,
+&quot;order&quot;:&quot;04&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;target_url&quot;:{
+&quot;desc&quot;:&quot;The URL of the target device. So far only the WebSocket protocol is supported. The URL must also contain the PORT, but the protocol can be omitted. Default is empty string which means ws://127.0.0.1:8008 &lt;br /&gt; Examples: 192.168.1.100:8008 or wss://192.168.1.100:8009 &lt;br /&gt; &lt;i&gt; Note: If the HMI is hosted on the internal web server this option is ignored and HMI connects to the hostname / IP you use in the webbrowser URL.&lt;/i&gt;&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;prev&quot;:[
+&quot;ws_ip&quot;
+],
+&quot;type&quot;:&quot;str&quot;
+},
+&quot;use_client_time&quot;:{
+&quot;desc&quot;:&quot;If True the &lt;code&gt;show_clock&lt;/code&gt; display the time from client computer rather then target. This can be use when target device does not have NTP synchronization or RTC chip.&quot;,
+&quot;order&quot;:&quot;05&quot;,
+&quot;type&quot;:&quot;bool&quot;
+}
+},
+&quot;options&quot;:{
+&quot;header_mode&quot;:&quot;&quot;,
+&quot;kiosk_mode&quot;:&quot;False&quot;,
+&quot;log_level&quot;:&quot;&quot;,
+&quot;refresh_rate&quot;:20,
+&quot;show_clock&quot;:&quot;True&quot;,
+&quot;target_url&quot;:&quot;&quot;,
+&quot;use_client_time&quot;:&quot;True&quot;
+}
+}</desc>
+    <g
+       id="g883">
+      <text
+         xml:space="preserve"
+         y="2"
+         id="text3037"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;font-family:Montserrat;-inkscape-font-specification:Montserrat;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#545e6f;fill-opacity:1"
+           id="tspan3039"
+           y="65"
+           x="99">HMI Config </tspan></text>
+      <g
+         style="stroke-width:0.55555552"
+         transform="matrix(1.6877637,0,0,1.6877637,15.611815,15.165)"
+         id="rexygen-logo">
+        <g
+           style="stroke-width:0.55555552"
+           id="g913">
+          <path
+             style="fill:url(#lg-hmic984-72AFF2);stroke-width:0.55555552"
+             inkscape:connector-curvature="0"
+             d="m 36.293,9.011 h -0.069 -1.87 V 11.74 H 31.889 V 2.045 h 4.334 c 2.562,0 4.03,1.219 4.03,3.379 0,1.482 -0.624,2.549 -1.759,3.116 l 2.036,3.199 H 37.732 Z M 36.224,7.072 c 1.066,0 1.69,-0.54 1.69,-1.565 0,-1.011 -0.624,-1.523 -1.69,-1.523 h -1.87 v 3.089 h 1.87 z"
+             id="path869" />
+          <path
+             style="fill:url(#lg-hmic_2_-72AFF2);stroke-width:0.55555552"
+             inkscape:connector-curvature="0"
+             d="m 44.729,3.983 v 1.926 h 4.626 V 7.847 H 44.729 V 9.8 h 5.276 v 1.939 H 42.264 V 2.045 h 7.588 v 1.938 z"
+             id="path876" />
+          <path
+             style="fill:url(#lg-hmic_3_-72AFF2);stroke-width:0.55555552"
+             inkscape:connector-curvature="0"
+             d="M 60.975,11.739 H 58.026 L 55.935,8.65 53.844,11.739 H 50.977 L 54.439,6.781 51.198,2.045 h 2.867 l 1.87,2.825 1.869,-2.825 h 2.895 l -3.2,4.625 z"
+             id="path883" />
+          <path
+             style="fill:url(#lg-hmic_4_-72AFF2);stroke-width:0.55555552"
+             inkscape:connector-curvature="0"
+             d="M 66.766,11.739 H 64.315 V 8.679 L 60.728,2.045 h 2.466 l 2.34,4.224 2.284,-4.224 h 2.466 l -3.518,6.564 z"
+             id="path890" />
+          <path
+             style="fill:url(#lg-hmic_5_-72AFF2);stroke-width:0.55555552"
+             inkscape:connector-curvature="0"
+             d="m 79.479,6.809 v 3.781 c -1.038,0.733 -2.673,1.26 -4.03,1.26 -2.949,0 -5.179,-2.133 -5.179,-4.958 0,-2.812 2.285,-4.931 5.346,-4.931 1.44,0 2.963,0.555 3.961,1.441 l -1.385,1.676 c -0.707,-0.651 -1.69,-1.053 -2.59,-1.053 -1.593,0 -2.812,1.246 -2.812,2.866 0,1.648 1.232,2.895 2.839,2.895 0.499,0 1.136,-0.18 1.717,-0.471 V 6.809 Z"
+             id="path897" />
+          <path
+             style="fill:url(#lg-hmic_6_-72AFF2);stroke-width:0.55555552"
+             inkscape:connector-curvature="0"
+             d="m 84.011,3.983 v 1.926 h 4.625 V 7.847 H 84.011 V 9.8 h 5.276 v 1.939 H 81.545 V 2.045 h 7.589 v 1.938 z"
+             id="path904" />
+          <path
+             style="fill:url(#lg-hmic_7_-72AFF2);stroke-width:0.55555552"
+             inkscape:connector-curvature="0"
+             d="M 97.827,11.739 93.367,5.77 v 5.969 H 91.054 V 2.045 h 2.174 l 4.474,5.982 V 2.045 H 100 v 9.694 z"
+             id="path911" />
+        </g>
+        <g
+           style="stroke-width:0.55555552"
+           id="g925">
+          <path
+             style="fill:#0074c5;stroke-width:0.55555552"
+             inkscape:connector-curvature="0"
+             d="m 14.364,0.285 -2.335,1.759 c 0.158,0.241 0.314,0.483 0.466,0.727 0.683,1.093 1.309,2.21 1.869,3.284 0.563,-1.084 1.194,-2.211 1.883,-3.313 0.146,-0.234 0.298,-0.466 0.45,-0.698 z"
+             id="path915" />
+          <path
+             style="fill:#0074c5;stroke-width:0.55555552"
+             inkscape:connector-curvature="0"
+             d="M 2.712,0 0,2.044 c 1.237,1.475 2.938,3.623 4.298,5.798 0.813,1.303 1.534,2.663 2.133,3.896 h 3.747 C 9.436,10.094 8.41,8.025 7.173,6.046 5.746,3.763 4.01,1.554 2.712,0 Z"
+             id="path917" />
+          <path
+             style="fill:#0074c5;stroke-width:0.55555552"
+             inkscape:connector-curvature="0"
+             d="m 8.871,0.006 -2.708,2.04 c 0.761,1.021 1.533,2.118 2.231,3.236 1.429,2.286 2.583,4.686 3.36,6.456 h 3.682 C 14.665,9.862 13.202,6.578 11.27,3.485 10.518,2.282 9.688,1.1 8.871,0.006 Z"
+             id="path919" />
+          <path
+             style="fill:#0074c5;stroke-width:0.55555552"
+             inkscape:connector-curvature="0"
+             d="m 26.006,0 c -1.295,1.552 -3.018,3.748 -4.436,6.017 -1.245,1.991 -2.275,4.072 -3.019,5.722 h 3.746 c 0.602,-1.241 1.328,-2.613 2.148,-3.926 1.349,-2.16 3.037,-4.294 4.272,-5.769 z"
+             id="path921" />
+          <path
+             style="fill:#0074c5;stroke-width:0.55555552"
+             inkscape:connector-curvature="0"
+             d="m 19.852,0.003 c -0.81,1.087 -1.633,2.259 -2.379,3.453 -0.876,1.401 -1.655,2.843 -2.317,4.175 0.818,1.688 1.439,3.161 1.819,4.109 0.777,-1.774 1.937,-4.188 3.373,-6.487 0.692,-1.108 1.457,-2.196 2.211,-3.21 z"
+             id="path923" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

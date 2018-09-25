@@ -1,14 +1,11 @@
-Plain project of REXYGEN
+Aliases OwsDrv project of REXYGEN
 =======================================
 
-The source files in this folder form a plain project. This is the bare minimum 
+The source files in this folder form a project for the example of OwsDrv external configuration. This is the bare minimum 
 to start the development from.
 
 The executive of the project contains one task, which should be filled with 
 function blocks to achieve the desired functionality.
-
-Additional tasks and human machine interface (HMI) can be added as needed. See
-the other examples and documentation for reference.
 
 ## Timing of the project ##
 

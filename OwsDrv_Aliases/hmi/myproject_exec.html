@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!-- REX HMI Template version=2.50.7-9228 -->
+
+<html class="mdc-typography">
+
+<head>
+    <meta charset="utf-8" />
+
+    <!-- Allow fullscreen on mobile platforms -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Chrome -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- iOS -->
+
+
+    <link rel="icon shortcut" sizes="any" href="images/favicon.ico">
+
+
+    <title>
+        myproject_exec
+    </title>
+
+    <!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui/jquery-ui-1.12.1-custom.min.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui/jquery-ui-timepicker-addon.min.css">
+		<link rel="stylesheet" type="text/css" href="css/mdc/rex-material-components-web.css">
+		<link rel="stylesheet" type="text/css" href="css/rex-hmi.min.css">
+
+
+    <!-- JS -->
+		<script type="text/javascript" src="js/rexhmi-vendor.min.js?version=2.50.7-9228"></script>
+		<script type="text/javascript" src="js/rexhmi.min.js?version=2.50.7-9228"></script>
+
+
+    <script type="text/javascript">
+        // Uncomment the following function if necessary
+        // The following function is called before the REX HMI is automatically connected to the
+        // given target URL
+        /* REX.HMI.init = function() {
+
+                // Set REX Target URL (use only if the target is NOT running on the same machine)
+                // REX.HMI.setTargetUrl('ws://127.0.0.1:8008/rex');
+
+                // Set refresh rate (Default: 100 ms)
+                // REX.HMI.setRefreshRate(100);
+
+                // Change title of the page
+                // REX.HMI.setTitle('TITLE');
+
+            }; */
+    </script>
+
+</head>
+
+<body>
+    <header id="header">        
+        <a id="logo" href="/"></a>
+        <div id="header-title" class="header-title-with-info-and-hearth-beat">
+            myproject_exec
+        </div>
+        <time id="heart-beat-clock" class="current-time" style="display:none">XX:XX:XX</time>
+        <div id="heart-beat"></div>
+        <div id="info-btn" class="">
+            <div id="log-error-counter" class="">0</div>
+        </div>
+    </header>
+    <div id="main-block">
+        <aside id="info" class="">
+            <div id="controls">
+                <table class="table-list">
+                    <tr>
+                        <td>User</td>
+                        <td class='info-whoami'>
+                            <span class="whoami">XXXXX</span>&nbsp;
+                            <form id="info-logout" action="/logout" method="POST">
+                                (<button type="submit">logout</button>)
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Version</td>
+                        <td class="info-version">X.X.X-XXXX</td>
+                    </tr>
+                    <tr>
+                        <td>Target time</td>
+                        <td class="current-time">XX:XX:XX</td>
+                    </tr>
+                    <tr>
+                        <td>Refresh rate</td>
+                        <td>
+                            <div class="mdc-text-field mdc-text-field--fullwidth" data-mdc-auto-init="MDCTextField">
+                                <input type="text" id="target-refresh-rate" class="mdc-text-field__input">
+                                <div class="mdc-text-field__bottom-line"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>URL</td>
+                        <td>
+                            <div class="mdc-text-field mdc-text-field--fullwidth" data-mdc-auto-init="MDCTextField">
+                                <input type="text" id="target-url" class="mdc-text-field__input">
+                                <div class="mdc-text-field__bottom-line"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="log">
+                <table></table>
+            </div>
+        </aside>        
+        <main id="content" class="">
+            <!-- BEGIN OF CUSTOM CONTENT -->
+<div id="rex-dialog-container" oncontextmenu="return false;">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' style='width:265px;height:512px' id='myproject_exec'>
+<g transform='translate(30 88)' id='myproject_exec.EXEC' class='rex-block' rex-block-type='EXEC' rex-orientation='0'>
+<rect width='45' height='289' fill='rgb(255,255,255)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'></rect>
+<text x='8' y='300' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>EXEC</tspan></text>
+<text class='rex-block-out' x='42' y='25' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>Modules</tspan></text>
+<line x1='50' y1='22' x2='45' y2='22' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-out' x='42' y='60' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>Drivers</tspan></text>
+<line x1='50' y1='57' x2='45' y2='57' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-out' x='42' y='95' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>Archives</tspan></text>
+<polyline points='45,89 49,92 45,95' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-out' x='42' y='130' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>QTask</tspan></text>
+<polyline points='45,124 49,127 45,130' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-out' x='42' y='165' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>Level0</tspan></text>
+<line x1='50' y1='162' x2='45' y2='162' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-out' x='42' y='200' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>Level1</tspan></text>
+<polyline points='45,194 49,197 45,200' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-out' x='42' y='235' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>Level2</tspan></text>
+<polyline points='45,229 49,232 45,235' fill='none' stroke='rgb(0,0,0)'/>
+<text class='rex-block-out' x='42' y='270' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>Level3</tspan></text>
+<polyline points='45,264 49,267 45,270' fill='none' stroke='rgb(0,0,0)'/>
+</g>
+<g transform='translate(30 403)' id='myproject_exec.HMI' class='rex-block' rex-block-type='HMI' rex-orientation='0'>
+<rect width='50' height='14' fill='rgb(255,255,255)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'></rect>
+<text x='15' y='25' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>HMI</tspan></text>
+</g>
+<g transform='translate(30 438)' id='myproject_exec.INFO' class='rex-block' rex-block-type='INFO' rex-orientation='0'>
+<rect width='45' height='19' fill='rgb(255,255,255)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'></rect>
+<text x='10' y='30' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>INFO</tspan></text>
+</g>
+<g transform='translate(195 138)' id='myproject_exec.OWS' class='rex-block' rex-block-type='IODRV' rex-orientation='0'>
+<rect width='50' height='14' fill='rgb(255,255,255)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'></rect>
+<text x='13' y='25' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>OWS</tspan></text>
+<text class='rex-block-in' x='2' y='10' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>prev</tspan></text>
+<path d='M-10,3 L-1,7 L-10,11z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='7' x2='0' y2='7' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-out' x='47' y='10' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>next</tspan></text>
+<polyline points='50,4 54,7 50,10' fill='none' stroke='rgb(0,0,0)'/>
+</g>
+<g transform='translate(190 103)' id='myproject_exec.OwsDrv' class='rex-block' rex-block-type='MODULE' rex-orientation='0'>
+<rect width='50' height='14' fill='rgb(255,255,255)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'></rect>
+<text x='8' y='25' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>OwsDrv</tspan></text>
+<text class='rex-block-in' x='2' y='10' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>prev</tspan></text>
+<path d='M-10,3 L-1,7 L-10,11z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='7' x2='0' y2='7' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-out' x='47' y='10' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>next</tspan></text>
+<polyline points='50,4 54,7 50,10' fill='none' stroke='rgb(0,0,0)'/>
+</g>
+<g transform='translate(30 473)' id='myproject_exec.PROJECT' class='rex-block' rex-block-type='PROJECT' rex-orientation='0'>
+<rect width='45' height='19' fill='rgb(255,255,255)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'></rect>
+<text x='-1' y='30' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>PROJECT</tspan></text>
+</g>
+<g transform='translate(115 138)' id='myproject_exec.RPI' class='rex-block' rex-block-type='IODRV' rex-orientation='0'>
+<rect width='50' height='14' fill='rgb(255,255,255)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'></rect>
+<text x='16' y='25' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>RPI</tspan></text>
+<text class='rex-block-in' x='2' y='10' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>prev</tspan></text>
+<path d='M-10,3 L-1,7 L-10,11z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='7' x2='0' y2='7' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-out' x='47' y='10' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>next</tspan></text>
+<line x1='55' y1='7' x2='50' y2='7' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(115 103)' id='myproject_exec.RPiDrv' class='rex-block' rex-block-type='MODULE' rex-orientation='0'>
+<rect width='50' height='14' fill='rgb(255,255,255)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'></rect>
+<text x='9' y='25' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>RPiDrv</tspan></text>
+<text class='rex-block-in' x='2' y='10' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>prev</tspan></text>
+<path d='M-10,3 L-1,7 L-10,11z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='7' x2='0' y2='7' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-out' x='47' y='10' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>next</tspan></text>
+<line x1='55' y1='7' x2='50' y2='7' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+</g>
+<g transform='translate(110 242)' id='myproject_exec.myproject_task' class='rex-block' rex-block-type='TASK' rex-orientation='0'>
+<rect width='50' height='16' fill='rgb(255,255,255)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'></rect>
+<text x='-9' y='27' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'><tspan>myproject_task</tspan></text>
+<text class='rex-block-in' x='2' y='11' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start' ><tspan>prev</tspan></text>
+<path d='M-10,4 L-1,8 L-10,12z' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<line x1='-15' y1='8' x2='0' y2='8' stroke='rgb(0,0,0)' shape-rendering='crispEdges'/>
+<text class='rex-block-out' x='47' y='11' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='end' ><tspan>next</tspan></text>
+<polyline points='50,5 54,8 50,11' fill='none' stroke='rgb(0,0,0)'/>
+</g>
+<g class='rex-annotation'>
+<rect x='11' y='11' width='99' height='19' fill='rgb(255,255,255)' stroke='none' shape-rendering='crispEdges'></rect>
+<text x='13' y='11' font-family='Helvetica' font-size='16' font-weight='700' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'>
+<tspan x='13' y='28'>Plain project</tspan>
+</text>
+</g>
+<g class='rex-annotation'>
+<rect x='13' y='42' width='174' height='26' fill='rgb(255,255,255)' stroke='none' shape-rendering='crispEdges'></rect>
+<text x='15' y='42' font-family='Helvetica' font-size='10' font-weight='400' font-style='normal' fill='rgb(0,0,0)' text-anchor='start'>
+<tspan x='15' y='53'>See the README.md file in project </tspan>
+<tspan x='15' y='64'>folder for detailed information.</tspan>
+</text>
+</g>
+<g class='rex-line'>
+<path d='M80,110 L100,110' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M80,145 L100,145' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M80,250 L95,250' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M170,145 L180,145' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+<path d='M170,110 L175,110' stroke='rgb(0,0,0)' stroke-width='1' fill='none' class='rex-line' shape-rendering='crispEdges' />
+</g>
+</svg>
+</div>

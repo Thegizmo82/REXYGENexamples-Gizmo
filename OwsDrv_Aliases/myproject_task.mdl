@@ -34,7 +34,7 @@ Model {
   }
   System {
     Name                    "myproject_task"
-    Location                [535, 27, 1494, 902]
+    Location                [613, 36, 1572, 911]
     #GUID                   13a2f1bf-adc5-42ba-9f2b-f576939a6341
     Block {
       BlockType               Reference
