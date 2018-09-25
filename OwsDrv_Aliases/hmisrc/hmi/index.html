@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<!-- REX HMI Template version=2.50.7-9228 -->
+
+<html class="mdc-typography">
+
+<head>
+    <meta charset="utf-8" />
+
+    <!-- Allow fullscreen on mobile platforms -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Chrome -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- iOS -->
+
+
+    <link rel="icon shortcut" sizes="any" href="images/favicon.ico">
+
+
+    <title>
+        OwsDrv external configuration example
+    </title>
+
+    <!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui/jquery-ui-1.12.1-custom.min.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui/jquery-ui-timepicker-addon.min.css">
+		<link rel="stylesheet" type="text/css" href="css/mdc/rex-material-components-web.css">
+		<link rel="stylesheet" type="text/css" href="css/rex-hmi.min.css">
+
+
+    <!-- CUSTOM CSS -->
+		<link rel="stylesheet" type="text/css" href="css/rex-ui-svg-general.css">
+
+		<!-- JS -->
+		<script type="text/javascript" src="js/rexhmi-vendor.min.js?version=2.50.7-9228"></script>
+		<script type="text/javascript" src="js/rexhmi.min.js?version=2.50.7-9228"></script>
+
+
+    <!-- CUSTOM JS -->
+		<script type="text/javascript" src="js/rex-ui-svg-general.js"></script>
+		<script type="text/javascript" src="js/rex-ui-svg-home.js"></script>
+		<script type="text/javascript" src="js/rex-ui-svg-hvac.js"></script>
+		<script type="text/javascript" src="js/rex-ui-svg-proc.js"></script>
+
+		<script type="text/javascript">
+        // Uncomment the following function if necessary
+        // The following function is called before the REX HMI is automatically connected to the
+        // given target URL
+        /* REX.HMI.init = function() {
+
+                // Set REX Target URL (use only if the target is NOT running on the same machine)
+                // REX.HMI.setTargetUrl('ws://127.0.0.1:8008/rex');
+
+                // Set refresh rate (Default: 100 ms)
+                // REX.HMI.setRefreshRate(100);
+
+                // Change title of the page
+                // REX.HMI.setTitle('TITLE');
+
+            }; */
+    </script>
+
+</head>
+
+<body>
+    <header id="header">        
+        <a id="logo" href="/"></a>
+        <div id="header-title" class="header-title-with-info-and-hearth-beat">
+            OwsDrv external configuration example
+        </div>
+        <time id="heart-beat-clock" class="current-time" style="display:none">XX:XX:XX</time>
+        <div id="heart-beat"></div>
+        <div id="info-btn" class="">
+            <div id="log-error-counter" class="">0</div>
+        </div>
+    </header>
+    <div id="main-block">
+        <aside id="info" class="">
+            <div id="controls">
+                <table class="table-list">
+                    <tr>
+                        <td>User</td>
+                        <td class='info-whoami'>
+                            <span class="whoami">XXXXX</span>&nbsp;
+                            <form id="info-logout" action="/logout" method="POST">
+                                (<button type="submit">logout</button>)
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Version</td>
+                        <td class="info-version">X.X.X-XXXX</td>
+                    </tr>
+                    <tr>
+                        <td>Target time</td>
+                        <td class="current-time">XX:XX:XX</td>
+                    </tr>
+                    <tr>
+                        <td>Refresh rate</td>
+                        <td>
+                            <div class="mdc-text-field mdc-text-field--fullwidth" data-mdc-auto-init="MDCTextField">
+                                <input type="text" id="target-refresh-rate" class="mdc-text-field__input">
+                                <div class="mdc-text-field__bottom-line"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>URL</td>
+                        <td>
+                            <div class="mdc-text-field mdc-text-field--fullwidth" data-mdc-auto-init="MDCTextField">
+                                <input type="text" id="target-url" class="mdc-text-field__input">
+                                <div class="mdc-text-field__bottom-line"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="log">
+                <table></table>
+            </div>
+        </aside>        
+        <main id="content" class="">
+            <!-- BEGIN OF CUSTOM CONTENT -->
+			<!-- Created with Inkscape (http://www.inkscape.org/) --><svg xmlns:rexsvg="http://www.rexcontrols.com/rexsvg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1246" height="800" version="1.1" id="svg8" inkscape:version="0.92.2 (b81de4013d, 2018-02-13, custom)" sodipodi:docname="index.hmi.svg" style="overflow: overlay;" rexsvg:module="REXSVG">
+			  <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="0.5" inkscape:cx="221.04172" inkscape:cy="352.50719" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="false" units="px" inkscape:window-width="1920" inkscape:window-height="1017" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1"/>
+			  <defs id="defs2"/>
+			  <metadata id="metadata5">
+			    <rdf:RDF>
+			      <cc:Work rdf:about="">
+			        <dc:format>image/svg+xml</dc:format>
+			        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+			        <dc:title/>
+			      </cc:Work>
+			    </rdf:RDF>
+			  </metadata>
+			  <g id="layer1" inkscape:groupmode="layer" inkscape:label="Layer 1">
+			    <text xml:space="preserve" style="font-style:normal;font-weight:normal;font-size:21.33333397px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none" x="84.859627" y="75.598961" id="text4337"><tspan sodipodi:role="line" id="tspan4335" x="84.859627" y="75.598961">Temperature Sensor 1</tspan></text>
+			    <text xml:space="preserve" style="font-style:normal;font-weight:normal;font-size:21.33333397px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none" x="493.57812" y="75.619789" id="text4337-9"><tspan sodipodi:role="line" id="tspan4335-7" x="493.57812" y="75.619789">Temperature Sensor 2</tspan></text>
+			    <text xml:space="preserve" style="font-style:normal;font-weight:normal;font-size:21.33333397px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none" x="890.89581" y="75.75" id="text4337-1"><tspan sodipodi:role="line" id="tspan4335-9" x="890.89581" y="75.75">Digital Input Sensor 1</tspan></text>
+			    <g transform="matrix(0.52698381,0,0,1,180.53349,106.13672)" id="DisplayString" rexsvg:version="11" rexsvg:filename="DisplayString.svg" rexsvg:module="DisplayString">
+			      <title id="ds-title">DisplayString</title>
+			      <desc id="ds-desc">{
+			"connections":{
+			"value":"TS1"
+			},
+			"options":{
+			"format":"text",
+			"showValue":"False",
+			"values":[]
+			}
+			}</desc>
+			      <text style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start" id="text3689" x="-25.914042" y="19.401041" rexsvg:tag="display">XXX DISPLAY STRING XXX</text>
+			    </g>
+			    <g transform="matrix(0.5132732,0,0,1,589.34172,106.13672)" id="DisplayString-3" rexsvg:version="11" rexsvg:filename="DisplayString.svg" rexsvg:module="DisplayString">
+			      <title id="ds-title-5">DisplayString</title>
+			      <desc id="ds-desc-2">{
+			"connections":{
+			"value":"TS2"
+			},
+			"options":{
+			"format":"text",
+			"showValue":"False",
+			"values":[]
+			}
+			}</desc>
+			      <text style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start" id="text3689-0" x="-25.914042" y="19.401041" rexsvg:tag="display">XXX DISPLAY STRING XXX</text>
+			    </g>
+			    <g rexsvg:module="DisplayString" rexsvg:filename="DisplayString.svg" rexsvg:version="11" id="DisplayString-8" transform="matrix(0.55440503,0,0,1,961.40064,106.13672)">
+			      <title id="ds-title-7">DisplayString</title>
+			      <desc id="ds-desc-0">{
+			"connections":{
+			"value":"TS3"
+			},
+			"options":{
+			"format":"text",
+			"showValue":"False",
+			"values":[]
+			}
+			}</desc>
+			      <text rexsvg:tag="display" y="19.401041" x="-25.914042" id="text3689-8" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">XXX DISPLAY STRING XXX</text>
+			    </g>
+			    <g id="Input" rexsvg:module="Input" rexsvg:filename="Input.svg" rexsvg:version="13" transform="matrix(2.8726754,0,0,1.291685,60.370868,407.62473)">
+			      <title id="title2990">TS1 Sensor Path</title>
+			      <desc id="desc3795">{
+			"connections":{
+			"value":"INPUT_TS1"
+			},
+			"options":{
+			"css":{},
+			"decimals":0,
+			"fontScale":1,
+			"format":"text",
+			"max":"",
+			"min":"",
+			"offset":0,
+			"scale":1,
+			"setOnBlur":"False",
+			"textAlign":"left",
+			"virtualKeyboard":"False",
+			"writePerm":[]
+			}
+			}</desc>
+			      <rect y="0" x="0" height="30" width="100" id="rect3010" style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.85783237;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+			      <text id="Text-1" y="17.929766" x="49.687382" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#0000ff;fill-opacity:1;stroke:none" xml:space="preserve" inkscape:label="#text3012"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.3317461px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;fill:#0000ff;fill-opacity:1" y="17.929766" x="49.687382" id="tspan3014" sodipodi:role="line">Input</tspan></text>
+			    </g>
+			    <g id="Input-9" rexsvg:module="Input" rexsvg:filename="Input.svg" rexsvg:version="13" transform="matrix(2.8727089,0,0,1.2910178,475.51764,407.63474)">
+			      <title id="title2990-2">TS2 Sensor Path</title>
+			      <desc id="desc3795-5">{
+			"connections":{
+			"value":"INPUT_TS2"
+			},
+			"options":{
+			"css":{},
+			"decimals":0,
+			"fontScale":1,
+			"format":"text",
+			"max":"",
+			"min":"",
+			"offset":0,
+			"scale":1,
+			"setOnBlur":"False",
+			"textAlign":"left",
+			"virtualKeyboard":"False",
+			"writePerm":[]
+			}
+			}</desc>
+			      <rect y="0" x="0" height="30" width="100" id="rect3010-7" style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.85783237;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+			      <text id="Text-1-2" y="17.929766" x="49.687382" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#0000ff;fill-opacity:1;stroke:none" xml:space="preserve" inkscape:label="#text3012"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.3317461px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;fill:#0000ff;fill-opacity:1" y="17.929766" x="49.687382" id="tspan3014-3" sodipodi:role="line">Input</tspan></text>
+			    </g>
+			    <g id="Input-9-9" rexsvg:module="Input" rexsvg:filename="Input.svg" rexsvg:version="13" transform="matrix(2.8328593,0,0,1.2920629,866.52289,407.61906)">
+			      <title id="title2990-2-9">DS1 Sensor Path</title>
+			      <desc id="desc3795-5-1">{
+			"connections":{
+			"value":"INPUT_DS1"
+			},
+			"options":{
+			"css":{},
+			"decimals":0,
+			"fontScale":1,
+			"format":"text",
+			"max":"",
+			"min":"",
+			"offset":0,
+			"scale":1,
+			"setOnBlur":"False",
+			"textAlign":"left",
+			"virtualKeyboard":"False",
+			"writePerm":[]
+			}
+			}</desc>
+			      <rect y="0" x="0" height="30" width="100" id="rect3010-7-5" style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.85783237;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+			      <text id="Text-1-2-4" y="17.929766" x="49.687382" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#0000ff;fill-opacity:1;stroke:none" xml:space="preserve" inkscape:label="#text3012"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.3317461px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;fill:#0000ff;fill-opacity:1" y="17.929766" x="49.687382" id="tspan3014-3-9" sodipodi:role="line">Input</tspan></text>
+			    </g>
+			    <g transform="translate(82.711184,331.13672)" id="DisplayString-0" rexsvg:version="11" rexsvg:filename="DisplayString.svg" rexsvg:module="DisplayString">
+			      <title id="ds-title-8">OWS Path TS1</title>
+			      <desc id="ds-desc-04">{
+			"connections":{
+			"value":"INPUT_TS1SY"
+			},
+			"options":{
+			"format":"text",
+			"showValue":"False",
+			"values":[]
+			}
+			}</desc>
+			      <text style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start" id="text3689-3" x="-25.914042" y="19.401041" rexsvg:tag="display">XXX DISPLAY STRING XXX</text>
+			    </g>
+			    <g transform="translate(491.87239,331.13672)" id="DisplayString-0-2" rexsvg:version="11" rexsvg:filename="DisplayString.svg" rexsvg:module="DisplayString">
+			      <title id="ds-title-8-9">OWS Path TS2</title>
+			      <desc id="ds-desc-04-1">{
+			"connections":{
+			"value":"INPUT_TS2SY"
+			},
+			"options":{
+			"format":"text",
+			"showValue":"False",
+			"values":[]
+			}
+			}</desc>
+			      <text style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start" id="text3689-3-3" x="-25.914042" y="19.401041" rexsvg:tag="display">XXX DISPLAY STRING XXX</text>
+			    </g>
+			    <g rexsvg:module="DisplayString" rexsvg:filename="DisplayString.svg" rexsvg:version="11" id="DisplayString-0-7" transform="translate(888.87239,331.13672)">
+			      <title id="ds-title-8-3">OWS Path DS1</title>
+			      <desc id="ds-desc-04-4">{
+			"connections":{
+			"value":"INPUT_DS1SY"
+			},
+			"options":{
+			"format":"text",
+			"showValue":"False",
+			"values":[]
+			}
+			}</desc>
+			      <text rexsvg:tag="display" y="19.401041" x="-25.914042" id="text3689-3-0" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">XXX DISPLAY STRING XXX</text>
+			    </g>
+			    <g id="Button" transform="matrix(1.3966131,0,0,1.3966131,41.98591,509.47796)" rexsvg:module="Button" rexsvg:filename="Button.svg" rexsvg:version="12">
+			      <title id="title2990-25">TS1 Load</title>
+			      <desc id="desc3795-2">{
+			"connections":{
+			"value":"TS1_LP"
+			},
+			"options":{
+			"colorFalse":"#FFFFFF",
+			"colorTrue":"#00C8B4",
+			"fontScale":1,
+			"labelColorFalse":"#000000",
+			"labelColorTrue":"#FFFFFF",
+			"labelFalse":"TS1 LOAD",
+			"labelTrue":"",
+			"reverseMeaning":"False",
+			"type":"PushButton",
+			"writePerm":[]
+			}
+			}</desc>
+			      <rect y="0" x="0.00084454822" height="42.276619" width="92.869949" id="rect3010-79" style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+			      <text id="Text-1-9" y="25.128874" x="46.150532" xml:space="preserve" inkscape:label="#text3012" style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:15.27504921px;font-family:Roboto;-inkscape-font-specification:'Roboto, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"><tspan y="25.128874" x="46.150532" id="tspan3014-9" sodipodi:role="line">TS1 LOAD</tspan></text>
+			    </g>
+			    <g id="Button-1" transform="matrix(1.3966131,0,0,1.3966131,247.68932,509.47796)" rexsvg:module="Button" rexsvg:filename="Button.svg" rexsvg:version="12">
+			      <title id="title2990-25-7">TS1 Save</title>
+			      <desc id="desc3795-2-9">{
+			"connections":{
+			"value":"TS1_SP"
+			},
+			"options":{
+			"colorFalse":"#FFFFFF",
+			"colorTrue":"#00C8B4",
+			"fontScale":1,
+			"labelColorFalse":"#000000",
+			"labelColorTrue":"#FFFFFF",
+			"labelFalse":"TS1 SAVE",
+			"labelTrue":"",
+			"reverseMeaning":"False",
+			"type":"PushButton",
+			"writePerm":[]
+			}
+			}</desc>
+			      <rect y="0" x="0.00084454822" height="42.276619" width="92.869949" id="rect3010-79-1" style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+			      <text id="Text-1-9-5" y="25.128874" x="46.150532" xml:space="preserve" inkscape:label="#text3012" style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:15.27504921px;font-family:Roboto;-inkscape-font-specification:'Roboto, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"><tspan y="25.128874" x="46.150532" id="tspan3014-9-6" sodipodi:role="line">TS1 SAVE</tspan></text>
+			    </g>
+			    <g id="Button-9" transform="matrix(1.3966131,0,0,1.3966131,448.29542,508.47796)" rexsvg:module="Button" rexsvg:filename="Button.svg" rexsvg:version="12">
+			      <title id="title2990-25-5">TS2 Load</title>
+			      <desc id="desc3795-2-5">{
+			"connections":{
+			"value":"TS2_LP"
+			},
+			"options":{
+			"colorFalse":"#FFFFFF",
+			"colorTrue":"#00C8B4",
+			"fontScale":1,
+			"labelColorFalse":"#000000",
+			"labelColorTrue":"#FFFFFF",
+			"labelFalse":"TS2 LOAD",
+			"labelTrue":"",
+			"reverseMeaning":"False",
+			"type":"PushButton",
+			"writePerm":[]
+			}
+			}</desc>
+			      <rect y="0" x="0.00084454822" height="42.276619" width="92.869949" id="rect3010-79-8" style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+			      <text id="Text-1-9-4" y="25.128874" x="46.150532" xml:space="preserve" inkscape:label="#text3012" style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:15.27504921px;font-family:Roboto;-inkscape-font-specification:'Roboto, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"><tspan y="25.128874" x="46.150532" id="tspan3014-9-61" sodipodi:role="line">TS2 LOAD</tspan></text>
+			    </g>
+			    <g id="Button-1-8" transform="matrix(1.3966131,0,0,1.3966131,653.99883,508.47796)" rexsvg:module="Button" rexsvg:filename="Button.svg" rexsvg:version="12">
+			      <title id="title2990-25-7-9">TS2 Save</title>
+			      <desc id="desc3795-2-9-0">{
+			"connections":{
+			"value":"TS2_SP"
+			},
+			"options":{
+			"colorFalse":"#FFFFFF",
+			"colorTrue":"#00C8B4",
+			"fontScale":1,
+			"labelColorFalse":"#000000",
+			"labelColorTrue":"#FFFFFF",
+			"labelFalse":"TS2 SAVE",
+			"labelTrue":"",
+			"reverseMeaning":"False",
+			"type":"PushButton",
+			"writePerm":[]
+			}
+			}</desc>
+			      <rect y="0" x="0.00084454822" height="42.276619" width="92.869949" id="rect3010-79-1-1" style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+			      <text id="Text-1-9-5-0" y="25.128874" x="46.150532" xml:space="preserve" inkscape:label="#text3012" style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:15.27504921px;font-family:Roboto;-inkscape-font-specification:'Roboto, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"><tspan y="25.128874" x="46.150532" id="tspan3014-9-6-7" sodipodi:role="line">TS2 SAVE</tspan></text>
+			    </g>
+			    <g id="Button-0" transform="matrix(1.3966131,0,0,1.3966131,840.29542,508.47796)" rexsvg:module="Button" rexsvg:filename="Button.svg" rexsvg:version="12">
+			      <title id="title2990-25-0">DS1 Load</title>
+			      <desc id="desc3795-2-3">{
+			"connections":{
+			"value":"DS1_LP"
+			},
+			"options":{
+			"colorFalse":"#FFFFFF",
+			"colorTrue":"#00C8B4",
+			"fontScale":1,
+			"labelColorFalse":"#000000",
+			"labelColorTrue":"#FFFFFF",
+			"labelFalse":"DS1 LOAD",
+			"labelTrue":"",
+			"reverseMeaning":"False",
+			"type":"PushButton",
+			"writePerm":[]
+			}
+			}</desc>
+			      <rect y="0" x="0.00084454822" height="42.276619" width="92.869949" id="rect3010-79-86" style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+			      <text id="Text-1-9-3" y="25.128874" x="46.150532" xml:space="preserve" inkscape:label="#text3012" style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:15.27504921px;font-family:Roboto;-inkscape-font-specification:'Roboto, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"><tspan y="25.128874" x="46.150532" id="tspan3014-9-1" sodipodi:role="line">DS1 LOAD</tspan></text>
+			    </g>
+			    <g id="Button-1-4" transform="matrix(1.3966131,0,0,1.3966131,1045.9988,508.47796)" rexsvg:module="Button" rexsvg:filename="Button.svg" rexsvg:version="12">
+			      <title id="title2990-25-7-5">DS1 Save</title>
+			      <desc id="desc3795-2-9-02">{
+			"connections":{
+			"value":"DS1_SP"
+			},
+			"options":{
+			"colorFalse":"#FFFFFF",
+			"colorTrue":"#00C8B4",
+			"fontScale":1,
+			"labelColorFalse":"#000000",
+			"labelColorTrue":"#FFFFFF",
+			"labelFalse":"DS1 SAVE",
+			"labelTrue":"",
+			"reverseMeaning":"False",
+			"type":"PushButton",
+			"writePerm":[]
+			}
+			}</desc>
+			      <rect y="0" x="0.00084454822" height="42.276619" width="92.869949" id="rect3010-79-1-0" style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+			      <text id="Text-1-9-5-4" y="25.128874" x="46.150532" xml:space="preserve" inkscape:label="#text3012" style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:15.27504921px;font-family:Roboto;-inkscape-font-specification:'Roboto, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"><tspan y="25.128874" x="46.150532" id="tspan3014-9-6-3" sodipodi:role="line">DS1 SAVE</tspan></text>
+			    </g>
+			    <g rexsvg:version="12" rexsvg:filename="Button.svg" rexsvg:module="Button" transform="matrix(1.3966131,0,0,1.3966131,569.14713,636.47796)" id="Button-7">
+			      <title id="title2990-0">OWS SERVER RELOAD</title>
+			      <desc id="desc3795-3">{
+			"connections":{
+			"value":"OWS_SVR_PB"
+			},
+			"options":{
+			"colorFalse":"#FFFFFF",
+			"colorTrue":"#00C8B4",
+			"fontScale":0.75,
+			"labelColorFalse":"#000000",
+			"labelColorTrue":"#FFFFFF",
+			"labelFalse":"RELOAD OWS",
+			"labelTrue":"",
+			"reverseMeaning":"False",
+			"type":"PushButton",
+			"writePerm":[]
+			}
+			}</desc>
+			      <rect style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" id="rect3010-2" width="92.869949" height="42.276619" x="0.00084454822" y="0"/>
+			      <text style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:15.27504921px;font-family:Roboto;-inkscape-font-specification:'Roboto, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff" inkscape:label="#text3012" xml:space="preserve" x="46.150532" y="25.128874" id="Text-1-0"><tspan sodipodi:role="line" id="tspan3014-1" x="46.150532" y="25.128874">RELOAD OWS</tspan></text>
+			    </g>
+			  </g>
+			  <g rexsvg:module="HMIConfig" rexsvg:version="14" rexsvg:rexversion="2.50.7-9030" id="HMIConfig" width="200" height="80" transform="translate(0,-85)" sodipodi:insensitive="true">
+			    <desc id="desc3016">{
+			"connections":[
+			{
+			"alias":"DS1_LP",
+			"cstring":"myproject_task.CNB_OWS_PATH_DS1L:YCN",
+			"type":"W"
+			},
+			{
+			"alias":"DS1_SP",
+			"cstring":"myproject_task.CNB_OWS_PATH_DS1S:YCN",
+			"type":"W"
+			},
+			{
+			"alias":"INPUT_DS1",
+			"cstring":"myproject_task.CNS_OWS_PATH_DS1:scv",
+			"type":"W"
+			},
+			{
+			"alias":"INPUT_DS1SS",
+			"cstring":"myproject_task.CNS_OWS_PATH_DS1:nmax",
+			"type":"W"
+			},
+			{
+			"alias":"INPUT_DS1SY",
+			"cstring":"myproject_task.SILOS_OWS_PATH_dS1:sy",
+			"type":"R"
+			},
+			{
+			"alias":"INPUT_TS1",
+			"cstring":"myproject_task.CNS_OWS_PATH_TS1:scv",
+			"type":"W"
+			},
+			{
+			"alias":"INPUT_TS1SS",
+			"cstring":"myproject_task.CNS_OWS_PATH_TS1:nmax",
+			"type":"W"
+			},
+			{
+			"alias":"INPUT_TS1SY",
+			"cstring":"myproject_task.SILOS_OWS_PATH_TS1:sy",
+			"type":"R"
+			},
+			{
+			"alias":"INPUT_TS2",
+			"cstring":"myproject_task.CNS_OWS_PATH_TS2:scv",
+			"type":"W"
+			},
+			{
+			"alias":"INPUT_TS2SS",
+			"cstring":"myproject_task.CNS_OWS_PATH_TS2:nmax",
+			"type":"W"
+			},
+			{
+			"alias":"INPUT_TS2SY",
+			"cstring":"myproject_task.SILOS_OWS_PATH_TS2:sy",
+			"type":"R"
+			},
+			{
+			"alias":"OWS_SVR_PB",
+			"cstring":"myproject_task.MP_OWSERVER:BSTATE",
+			"type":"W"
+			},
+			{
+			"alias":"TS1",
+			"cstring":"myproject_task.OWS__TS1:value",
+			"type":"R"
+			},
+			{
+			"alias":"TS1_LP",
+			"cstring":"myproject_task.CNB_OWS_PATH_TS1L:YCN",
+			"type":"W"
+			},
+			{
+			"alias":"TS1_SP",
+			"cstring":"myproject_task.CNB_OWS_PATH_TS1S:YCN",
+			"type":"W"
+			},
+			{
+			"alias":"TS2",
+			"cstring":"myproject_task.OWS__TS2:value",
+			"type":"R"
+			},
+			{
+			"alias":"TS2_LP",
+			"cstring":"myproject_task.CNB_OWS_PATH_TS2L:YCN",
+			"type":"W"
+			},
+			{
+			"alias":"TS2_SP",
+			"cstring":"myproject_task.CNB_OWS_PATH_TS2S:YCN",
+			"type":"W"
+			},
+			{
+			"alias":"TS3",
+			"cstring":"myproject_task.OWS__DS1:value",
+			"type":"R"
+			}
+			],
+			"options":{
+			"header_mode":"",
+			"kiosk_mode":"False",
+			"log_level":"",
+			"refresh_rate":20,
+			"show_clock":"True",
+			"target_url":"",
+			"use_client_time":"True"
+			}
+			}</desc>
+			    </g>
+			</svg>
+            <!-- END OF CUSTOM CONTENT -->
+        </main>
+        <script type="text/javascript" data-mdc="MDC init script">
+            window.mdc.autoInit();
+        </script>
+    </div>
+</body>
+
+</html>
